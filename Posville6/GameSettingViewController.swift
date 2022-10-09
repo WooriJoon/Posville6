@@ -18,8 +18,12 @@ enum GameMode {
 
 class GameSettingViewController: UIViewController {
     
+    @IBOutlet weak var secondSheet: UIView!
+    @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var gameModeLabel: UILabel!
-	
+    @IBOutlet weak var loserCountLabel: UILabel!
+    @IBOutlet weak var playerCountSheet: UIView!
+    
 	@IBOutlet var player0Button: MyBtn!
 	@IBOutlet var player1Button: MyBtn!
 	@IBOutlet var player2Button: MyBtn!
@@ -37,10 +41,26 @@ class GameSettingViewController: UIViewController {
     // ex) buttons[playerIndex[currentIndex]]
     var playersIndex: [Int] = []
     var currentIndex = 0
+    var loserCount = 1
     
 	override func viewDidLoad() {
+        stepper.value = 1
+        loserCountLabel.text = "탈락자 수 \(Int(stepper.value))명"
+        
+        popSecondSheet()
         setupUI()
 	}
+    
+    func stackSecondSheet() {
+        secondSheet.alpha = 1
+        secondSheet.isUserInteractionEnabled = true
+    }
+    
+    func popSecondSheet() {
+        secondSheet.alpha = 0
+        secondSheet.isUserInteractionEnabled = false
+        stepper.value = 1
+    }
     
     func setupUI() {
         switch gameMode {
@@ -59,6 +79,16 @@ class GameSettingViewController: UIViewController {
         default:
             gameModeLabel.text = "전체 - 일반모드"
         }
+        
+        playerCountSheet.layer.shadowOpacity = 0.3
+        playerCountSheet.layer.shadowOffset = CGSize(width: 1.0, height: 4.0)
+        playerCountSheet.layer.shadowRadius = 4
+        playerCountSheet.layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
+        
+//        secondSheet.layer.shadowOpacity = 0.3
+//        secondSheet.layer.shadowOffset = CGSize(width: 1.0, height: 4.0)
+//        secondSheet.layer.shadowRadius = 2
+//        secondSheet.layer.shadowColor = UIColor.black.cgColor
     }
 
 	@IBAction func onButtonClicked(_ sender: MyBtn) {
@@ -92,7 +122,7 @@ class GameSettingViewController: UIViewController {
         }
         
         // MARK: 1번. 현재 시트 -> 탈락자 고르는 시트로 UIView 전환.
-        
+        stackSecondSheet()
     }
     
     // "이전 버튼" 눌렸을 때, 다시 버튼 잠긴 거 풀어주는 함수.
@@ -134,7 +164,6 @@ class GameSettingViewController: UIViewController {
         }
     }
     
-
     func firstNext() {
         // 이동 전 지금 버튼의 border를 제거.
         buttons[playersIndex[currentIndex]].isBorder = false
@@ -164,6 +193,22 @@ class GameSettingViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
+    
+    @IBAction func previousButtonTapped(_ sender: UIButton) {
+        popSecondSheet()
+        backButtonTapped()
+    }
+    
+    
+    @IBAction func startButtonTapped(_ sender: UIButton) {
+        selectFirstPlayer()
+    }
+    
+    @IBAction func stepperTapped(_ sender: UIStepper) {
+        sender.minimumValue = 1
+        sender.maximumValue = Double(self.playersIndex.count) - 1
+        loserCountLabel.text = "탈락자 수 \(Int(sender.value))명"
+    }
 }
 
 class MyBtn: UIButton {
@@ -177,11 +222,12 @@ class MyBtn: UIButton {
     var isBorder: Bool = false {
         didSet {
             if isBorder {
-                self.layer.borderWidth = 2
-                self.layer.borderColor = UIColor.blue.cgColor
+                self.imageView?.layer.cornerRadius = 40
+                self.imageView?.layer.borderWidth = 3
+                self.imageView?.layer.borderColor = UIColor.blue.cgColor
             } else {
-                self.layer.borderWidth = 0
-                self.layer.borderColor = UIColor.clear.cgColor
+                self.imageView?.layer.borderWidth = 0
+                self.imageView?.layer.borderColor = UIColor.clear.cgColor
             }
         }
     }
