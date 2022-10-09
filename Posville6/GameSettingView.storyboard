@@ -125,7 +125,7 @@
                                             <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="exitButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="92i-j3-5zZ"/>
+                                            <action selector="exitButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9jX-Ny-BDa"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="NextButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kec-6I-6xo">
@@ -140,6 +140,9 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="playerCountSelected:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qhJ-uu-TD2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -186,12 +189,6 @@
                         <outlet property="player3Button" destination="jCn-9d-xCV" id="WLp-fL-QJr"/>
                         <outlet property="player4Button" destination="d7c-0D-h40" id="c1v-e8-iwK"/>
                         <outlet property="player5Button" destination="HrJ-TS-BxD" id="jRR-Ky-kiQ"/>
-                        <outletCollection property="playerButtons" destination="FMl-hP-a0A" collectionClass="NSMutableArray" id="LcH-Dw-zWy"/>
-                        <outletCollection property="playerButtons" destination="xnk-ux-LLv" collectionClass="NSMutableArray" id="0PH-bl-1yB"/>
-                        <outletCollection property="playerButtons" destination="r1p-GQ-Gkm" collectionClass="NSMutableArray" id="mt7-hD-hJu"/>
-                        <outletCollection property="playerButtons" destination="jCn-9d-xCV" collectionClass="NSMutableArray" id="y6k-CM-SKN"/>
-                        <outletCollection property="playerButtons" destination="d7c-0D-h40" collectionClass="NSMutableArray" id="6Rv-cb-JOU"/>
-                        <outletCollection property="playerButtons" destination="HrJ-TS-BxD" collectionClass="NSMutableArray" id="4sg-Op-ifB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
