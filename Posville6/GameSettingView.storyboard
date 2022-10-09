@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_0" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GameSettingView-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="GameSettingView" title="GameSettingView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="GameSettingViewController" customModule="Posville6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="Player0" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMl-hP-a0A" userLabel="Player1" customClass="MyBtn" customModule="Posville6" customModuleProvider="target">
+                                <rect key="frame" x="134" y="16" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="6cz-Me-xV0"/>
+                                    <constraint firstAttribute="height" constant="60" id="kVW-ku-GJX"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Rtm-cO-TMU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="Player1" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnk-ux-LLv" userLabel="Player2" customClass="MyBtn" customModule="Posville6" customModuleProvider="target">
+                                <rect key="frame" x="392" y="16" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="80N-FC-ANV"/>
+                                    <constraint firstAttribute="height" constant="60" id="nNe-ui-D8e"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="onButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yLN-l2-wIs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" restorationIdentifier="Player2" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1p-GQ-Gkm" userLabel="Player3" customClass="MyBtn" customModule="Posville6" customModuleProvider="target">
+                                <rect key="frame" x="650" y="16" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="5MG-tO-T8k"/>
+                                    <constraint firstAttribute="width" constant="60" id="kuF-OC-U8e"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="onButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qZ6-JC-Xlx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="Player3" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-9d-xCV" userLabel="Player4" customClass="MyBtn" customModule="Posville6" customModuleProvider="target">
+                                <rect key="frame" x="134" y="304" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8mT-Qd-RGL"/>
+                                    <constraint firstAttribute="width" constant="60" id="R1v-3E-svL"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="onButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sH4-gu-B44"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" restorationIdentifier="Player4" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7c-0D-h40" userLabel="Player5" customClass="MyBtn" customModule="Posville6" customModuleProvider="target">
+                                <rect key="frame" x="392" y="304" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="L9I-TU-YPY"/>
+                                    <constraint firstAttribute="height" constant="60" id="jVG-or-tav"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="onButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8G2-Ec-BA6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" restorationIdentifier="Player5" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrJ-TS-BxD" userLabel="Player6" customClass="MyBtn" customModule="Posville6" customModuleProvider="target">
+                                <rect key="frame" x="650" y="304" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Rf3-a9-NAc"/>
+                                    <constraint firstAttribute="width" constant="60" id="bU8-ah-srz"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="onButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0VF-1W-tCu"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" restorationIdentifier="GuideView" translatesAutoresizingMaskIntoConstraints="NO" id="DEP-ty-Sk3">
+                                <rect key="frame" x="134" y="95" width="576" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="맞춤법 - 일반모드" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56n-BC-dej">
+                                        <rect key="frame" x="230" y="29" width="119" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="현재 앉은 자리대로 모두 선택한 후 다음 버튼을 탭하세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rP2-eC-Nt5">
+                                        <rect key="frame" x="99" y="90" width="378" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" restorationIdentifier="ExitButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLo-ZE-UMI">
+                                        <rect key="frame" x="0.0" y="150" width="288" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="288" id="9TF-bH-bkF"/>
+                                            <constraint firstAttribute="height" constant="50" id="l8b-kL-h0h"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="나가기" cornerStyle="dynamic">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="NextButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kec-6I-6xo">
+                                        <rect key="frame" x="288" y="150" width="288" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="DwP-eH-ojj"/>
+                                            <constraint firstAttribute="width" constant="288" id="eEU-zU-5mt"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="다음" titleAlignment="center">
+                                            <fontDescription key="titleFontDescription" type="system" weight="heavy" pointSize="18"/>
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="GLo-ZE-UMI" firstAttribute="leading" secondItem="DEP-ty-Sk3" secondAttribute="leading" id="523-E6-Bar"/>
+                                    <constraint firstAttribute="bottom" secondItem="GLo-ZE-UMI" secondAttribute="bottom" id="Fa4-Ml-uWT"/>
+                                    <constraint firstAttribute="trailing" secondItem="kec-6I-6xo" secondAttribute="trailing" id="aai-I3-Cwq"/>
+                                    <constraint firstAttribute="bottom" secondItem="kec-6I-6xo" secondAttribute="bottom" id="olW-rk-e4B"/>
+                                    <constraint firstAttribute="width" constant="576" id="sMH-e5-T9z"/>
+                                    <constraint firstAttribute="height" constant="200" id="yS8-BZ-SlD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jCn-9d-xCV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="134" id="0d4-kP-lqe"/>
+                            <constraint firstAttribute="bottom" secondItem="d7c-0D-h40" secondAttribute="bottom" constant="26" id="1yW-Bd-hNV"/>
+                            <constraint firstItem="DEP-ty-Sk3" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="D8j-me-80e"/>
+                            <constraint firstItem="FMl-hP-a0A" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="16" id="HEN-Sy-XgX"/>
+                            <constraint firstItem="d7c-0D-h40" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="JdJ-7W-z5A"/>
+                            <constraint firstItem="DEP-ty-Sk3" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="NeJ-73-zK4"/>
+                            <constraint firstItem="r1p-GQ-Gkm" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="16" id="RI8-4j-q7U"/>
+                            <constraint firstItem="FMl-hP-a0A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="134" id="TQZ-Hl-u1g"/>
+                            <constraint firstItem="xnk-ux-LLv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="fj1-pF-b88"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HrJ-TS-BxD" secondAttribute="trailing" constant="134" id="i6a-GP-0Mt"/>
+                            <constraint firstAttribute="bottom" secondItem="jCn-9d-xCV" secondAttribute="bottom" constant="26" id="igJ-S3-1sK"/>
+                            <constraint firstItem="xnk-ux-LLv" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="16" id="t80-ri-5K8"/>
+                            <constraint firstAttribute="bottom" secondItem="HrJ-TS-BxD" secondAttribute="bottom" constant="26" id="tMy-Su-mni"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="r1p-GQ-Gkm" secondAttribute="trailing" constant="134" id="ubj-XN-h9V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="player0Button" destination="FMl-hP-a0A" id="5hB-bL-Ink"/>
+                        <outlet property="player1Button" destination="xnk-ux-LLv" id="EjJ-cI-bwT"/>
+                        <outlet property="player2Button" destination="r1p-GQ-Gkm" id="bGW-hh-WgT"/>
+                        <outlet property="player3Button" destination="jCn-9d-xCV" id="WLp-fL-QJr"/>
+                        <outlet property="player4Button" destination="d7c-0D-h40" id="c1v-e8-iwK"/>
+                        <outlet property="player5Button" destination="HrJ-TS-BxD" id="jRR-Ky-kiQ"/>
+                        <outletCollection property="playerButtons" destination="FMl-hP-a0A" collectionClass="NSMutableArray" id="LcH-Dw-zWy"/>
+                        <outletCollection property="playerButtons" destination="xnk-ux-LLv" collectionClass="NSMutableArray" id="0PH-bl-1yB"/>
+                        <outletCollection property="playerButtons" destination="r1p-GQ-Gkm" collectionClass="NSMutableArray" id="mt7-hD-hJu"/>
+                        <outletCollection property="playerButtons" destination="jCn-9d-xCV" collectionClass="NSMutableArray" id="y6k-CM-SKN"/>
+                        <outletCollection property="playerButtons" destination="d7c-0D-h40" collectionClass="NSMutableArray" id="6Rv-cb-JOU"/>
+                        <outletCollection property="playerButtons" destination="HrJ-TS-BxD" collectionClass="NSMutableArray" id="4sg-Op-ifB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="191" y="-31"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="basicButton" width="60" height="60"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
