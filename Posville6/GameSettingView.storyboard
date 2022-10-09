@@ -100,16 +100,14 @@
                             <view contentMode="scaleToFill" restorationIdentifier="GuideView" translatesAutoresizingMaskIntoConstraints="NO" id="DEP-ty-Sk3">
                                 <rect key="frame" x="134" y="95" width="576" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="맞춤법 - 일반모드" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56n-BC-dej">
-                                        <rect key="frame" x="230" y="29" width="119" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맞춤법 - 일반모드" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56n-BC-dej">
+                                        <rect key="frame" x="0.0" y="29" width="576" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="현재 앉은 자리대로 모두 선택한 후 다음 버튼을 탭하세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rP2-eC-Nt5">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 앉은 자리대로 모두 선택한 후 다음 버튼을 탭하세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rP2-eC-Nt5">
                                         <rect key="frame" x="99" y="90" width="378" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -126,6 +124,9 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="exitButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="92i-j3-5zZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="NextButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kec-6I-6xo">
                                         <rect key="frame" x="288" y="150" width="288" height="50"/>
@@ -145,10 +146,16 @@
                                 <constraints>
                                     <constraint firstItem="GLo-ZE-UMI" firstAttribute="leading" secondItem="DEP-ty-Sk3" secondAttribute="leading" id="523-E6-Bar"/>
                                     <constraint firstAttribute="bottom" secondItem="GLo-ZE-UMI" secondAttribute="bottom" id="Fa4-Ml-uWT"/>
+                                    <constraint firstItem="rP2-eC-Nt5" firstAttribute="top" secondItem="56n-BC-dej" secondAttribute="bottom" constant="40" id="HdW-eZ-35T"/>
+                                    <constraint firstItem="56n-BC-dej" firstAttribute="centerX" secondItem="rP2-eC-Nt5" secondAttribute="centerX" id="RrC-DT-5N9"/>
+                                    <constraint firstAttribute="trailing" secondItem="56n-BC-dej" secondAttribute="trailing" id="VMu-c2-MRg"/>
                                     <constraint firstAttribute="trailing" secondItem="kec-6I-6xo" secondAttribute="trailing" id="aai-I3-Cwq"/>
+                                    <constraint firstItem="56n-BC-dej" firstAttribute="leading" secondItem="DEP-ty-Sk3" secondAttribute="leading" id="baX-HP-jb4"/>
                                     <constraint firstAttribute="bottom" secondItem="kec-6I-6xo" secondAttribute="bottom" id="olW-rk-e4B"/>
                                     <constraint firstAttribute="width" constant="576" id="sMH-e5-T9z"/>
+                                    <constraint firstItem="56n-BC-dej" firstAttribute="centerX" secondItem="DEP-ty-Sk3" secondAttribute="centerX" id="sYS-AN-ew9"/>
                                     <constraint firstAttribute="height" constant="200" id="yS8-BZ-SlD"/>
+                                    <constraint firstItem="56n-BC-dej" firstAttribute="top" secondItem="DEP-ty-Sk3" secondAttribute="top" constant="29" id="zFd-KJ-dRr"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -172,6 +179,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gameModeLabel" destination="56n-BC-dej" id="lPf-s1-zFS"/>
                         <outlet property="player0Button" destination="FMl-hP-a0A" id="5hB-bL-Ink"/>
                         <outlet property="player1Button" destination="xnk-ux-LLv" id="EjJ-cI-bwT"/>
                         <outlet property="player2Button" destination="r1p-GQ-Gkm" id="bGW-hh-WgT"/>

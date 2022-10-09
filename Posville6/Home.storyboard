@@ -9,6 +9,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="rAk-gX-jV6">
+            <objects>
+                <navigationController id="G9V-KB-0OX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CWe-AN-u1N">
+                        <rect key="frame" x="0.0" y="47" width="844" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QfT-tE-OAR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-633" y="-117"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -31,29 +44,38 @@
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="  " backgroundImage="homeAll"/>
+                                                <connections>
+                                                    <segue destination="ktg-NB-3FI" kind="show" identifier="toGameSettingView0" id="2bt-6Y-0Ww"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWG-ri-SJg">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWG-ri-SJg">
                                                 <rect key="frame" x="146.66666666666669" y="0.0" width="146.66666666666669" height="142.33333333333334"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ZWG-ri-SJg" secondAttribute="height" multiplier="34:33" id="sQY-Kc-cWs"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="    " backgroundImage="homeGrammar"/>
+                                                <connections>
+                                                    <segue destination="ktg-NB-3FI" kind="show" identifier="toGameSettingView1" id="PWV-MB-azL"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFN-yz-QZt">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFN-yz-QZt">
                                                 <rect key="frame" x="293.33333333333337" y="0.0" width="146.66666666666663" height="142.33333333333334"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="GFN-yz-QZt" secondAttribute="height" multiplier="34:33" id="LnL-dq-WPf"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="  " backgroundImage="homeKorHistory"/>
+                                                <connections>
+                                                    <segue destination="ktg-NB-3FI" kind="show" identifier="toGameSettingView2" id="Hj1-q4-Fen"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNN-6U-vci" userLabel="ButtonBotSide">
                                         <rect key="frame" x="0.0" y="142.33333333333331" width="440" height="142.33333333333331"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RM7-cw-nQ0">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RM7-cw-nQ0">
                                                 <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="142.33333333333334"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="RM7-cw-nQ0" secondAttribute="height" multiplier="34:33" id="3bU-X0-e49"/>
@@ -61,22 +83,31 @@
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="   " backgroundImage="homeProb"/>
+                                                <connections>
+                                                    <segue destination="ktg-NB-3FI" kind="show" identifier="toGameSettingView3" id="JLX-dL-Hqi"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idh-Je-hrI">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idh-Je-hrI">
                                                 <rect key="frame" x="146.66666666666669" y="0.0" width="146.66666666666669" height="142.33333333333334"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="idh-Je-hrI" secondAttribute="height" multiplier="34:33" id="6mY-iF-PRr"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="  " backgroundImage="homeChar"/>
+                                                <connections>
+                                                    <segue destination="ktg-NB-3FI" kind="show" identifier="toGameSettingView4" id="dU6-uw-nFA"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkd-aY-sd4">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkd-aY-sd4">
                                                 <rect key="frame" x="293.33333333333337" y="0.0" width="146.66666666666663" height="142.33333333333334"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="hkd-aY-sd4" secondAttribute="height" multiplier="34:33" id="FxI-wq-3CW"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="  " backgroundImage="homeScience"/>
+                                                <connections>
+                                                    <segue destination="ktg-NB-3FI" kind="show" identifier="toGameSettingView5" id="jb7-hv-1C9"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -121,12 +152,26 @@
                             <constraint firstItem="WrD-dV-zo8" firstAttribute="leading" secondItem="8Md-te-TO4" secondAttribute="trailing" constant="76" id="sYZ-IY-EVW"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="bl5-NJ-qm9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="55" y="-34"/>
         </scene>
+        <!--GameSettingView-->
+        <scene sceneID="SRv-e1-GGf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GameSettingView" id="ktg-NB-3FI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MHL-fv-dZ8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulf-MB-zzn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="-35"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="jb7-hv-1C9"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="homeAll" width="304" height="296"/>
         <image name="homeChar" width="304" height="296"/>
@@ -136,7 +181,7 @@
         <image name="homeProb" width="304" height="296"/>
         <image name="homeScience" width="304" height="296"/>
         <namedColor name="BG">
-            <color red="0.95686274509803915" green="1" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9570000171661377" green="1" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

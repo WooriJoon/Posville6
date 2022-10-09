@@ -7,6 +7,15 @@
 
 import UIKit
 
+enum GameMode {
+    case all
+    case grammar
+    case krHistory
+    case proverb
+    case character
+    case science
+}
+
 class GameSettingViewController: UIViewController {
 	
 //	lazy var players = [player0, player1, player2, player3, player4, player5]
@@ -20,14 +29,42 @@ class GameSettingViewController: UIViewController {
 	
 	@IBOutlet var playerButtons: [UIButton]!
 	
-	var buttonAction : ((Bool) -> Void)?
-
+    @IBOutlet weak var gameModeLabel: UILabel!
+    
+    var buttonAction : ((Bool) -> Void)?
+    var gameMode: GameMode?
+    
 	override func viewDidLoad() {
+        setupUI()
 	}
+    
+    func setupUI() {
+        switch gameMode {
+        case .all:
+            gameModeLabel.text = "전체 - 일반모드"
+        case .grammar:
+            gameModeLabel.text = "맞춤법 - 일반모드"
+        case .krHistory:
+            gameModeLabel.text = "한국사 - 일반모드"
+        case .proverb:
+            gameModeLabel.text = "속담/사자성어 - 일반모드"
+        case .character:
+            gameModeLabel.text = "기호 - 일반모드"
+        case .science:
+            gameModeLabel.text = "과학상식 - 일반모드"
+        default:
+            gameModeLabel.text = "전체 - 일반모드"
+        }
+    }
 
 	@IBAction func onButtonClicked(_ sender: MyBtn) {
 		sender.isActivated.toggle()
 	}
+    
+    
+    @IBAction func exitButtonTapped(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
 }
 
 class MyBtn: UIButton {
