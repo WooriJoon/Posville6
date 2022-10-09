@@ -1,13 +1,5 @@
 //
-//  GrammarModel.swift
-//  Posville6
-//
-//  Created by Chicken on 2022/10/09.
-//
-
-import Foundation
-//
-//  Grammar.swift
+//  Quiz.swift
 //  Posville6
 //
 //  Created by Chicken on 2022/10/09.
