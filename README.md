@@ -34,6 +34,7 @@
 ### Tech
 - Swift
 - UIKit
+- Storyboard
 - Xcode
 
 ### Design
