@@ -14,8 +14,8 @@
 		36D19F4C28F1C281008EB9EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36D19F4B28F1C281008EB9EC /* Assets.xcassets */; };
 		36D19F4F28F1C281008EB9EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36D19F4D28F1C281008EB9EC /* LaunchScreen.storyboard */; };
 		36FEB03528F2A0BD001AD878 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FEB03428F2A0BD001AD878 /* Quiz.swift */; };
-		FB4884C328F2574C00109D14 /* GameSettingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4884C228F2574C00109D14 /* GameSettingView.storyboard */; };
-		FB4884C528F2575800109D14 /* GameSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4884C428F2575800109D14 /* GameSettingViewController.swift */; };
+		FB4884C328F2574C00109D14 /* PlayerSettingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4884C228F2574C00109D14 /* PlayerSettingView.storyboard */; };
+		FB4884C528F2575800109D14 /* PlayerSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4884C428F2575800109D14 /* PlayerSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +28,8 @@
 		36D19F4E28F1C281008EB9EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36D19F5028F1C281008EB9EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36FEB03428F2A0BD001AD878 /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
-		FB4884C228F2574C00109D14 /* GameSettingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameSettingView.storyboard; sourceTree = "<group>"; };
-		FB4884C428F2575800109D14 /* GameSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingViewController.swift; sourceTree = "<group>"; };
+		FB4884C228F2574C00109D14 /* PlayerSettingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayerSettingView.storyboard; sourceTree = "<group>"; };
+		FB4884C428F2575800109D14 /* PlayerSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				114DA33128F27E44002F92C6 /* Home.storyboard */,
-				FB4884C228F2574C00109D14 /* GameSettingView.storyboard */,
+				FB4884C228F2574C00109D14 /* PlayerSettingView.storyboard */,
 				36D19F4D28F1C281008EB9EC /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				114DA33328F27E4E002F92C6 /* HomeViewController.swift */,
-				FB4884C428F2575800109D14 /* GameSettingViewController.swift */,
+				FB4884C428F2575800109D14 /* PlayerSettingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -158,7 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB4884C328F2574C00109D14 /* GameSettingView.storyboard in Resources */,
+				FB4884C328F2574C00109D14 /* PlayerSettingView.storyboard in Resources */,
 				36D19F4F28F1C281008EB9EC /* LaunchScreen.storyboard in Resources */,
 				36D19F4C28F1C281008EB9EC /* Assets.xcassets in Resources */,
 				114DA33228F27E44002F92C6 /* Home.storyboard in Resources */,
@@ -176,7 +176,7 @@
 				36D19F4328F1C280008EB9EC /* AppDelegate.swift in Sources */,
 				36D19F4528F1C280008EB9EC /* SceneDelegate.swift in Sources */,
 				114DA33428F27E4E002F92C6 /* HomeViewController.swift in Sources */,
-				FB4884C528F2575800109D14 /* GameSettingViewController.swift in Sources */,
+				FB4884C528F2575800109D14 /* PlayerSettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

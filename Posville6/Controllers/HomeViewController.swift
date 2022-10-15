@@ -15,14 +15,23 @@ enum GameMode {
 class HomeViewController: UIViewController {
     
     var gameMode: GameMode = .normal
-
+    
+    @IBOutlet weak var allButton: UIButton!
+    @IBOutlet weak var grammarButton: UIButton!
+    @IBOutlet weak var korHistoryButton: UIButton!
+    @IBOutlet weak var proverbButton: UIButton!
+    @IBOutlet weak var characterButton: UIButton!
+    @IBOutlet weak var scienceButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let gameSettingVC = segue.destination as! GameSettingViewController
+        let gameSettingVC = segue.destination as! PlayerSettingViewController
         
         gameSettingVC.gameMode = gameMode
         
@@ -49,7 +58,14 @@ class HomeViewController: UIViewController {
             gameMode = .normal
         } else {
             gameMode = .fever
+            setupFeverMode()
         }
+    }
+    
+    func setupFeverMode() {
+        self.view.backgroundColor = UIColor(named: "feverBackground")
+        allButton.setBackgroundImage(UIImage(named: "homeFeverAll"), for: .normal)
+        
     }
     
 }

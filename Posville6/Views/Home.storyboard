@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G9V-KB-0OX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G9V-KB-0OX">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,13 +33,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WrD-dV-zo8" userLabel="ButtonStack">
-                                <rect key="frame" x="384" y="67" width="396" height="256"/>
+                                <rect key="frame" x="340" y="52.666666666666657" width="440" height="284.66666666666674"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BqK-Qx-hU7" userLabel="ButtonUpside">
-                                        <rect key="frame" x="0.0" y="0.0" width="396" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="440" height="142.33333333333334"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wja-9s-hj1">
-                                                <rect key="frame" x="0.0" y="0.0" width="132" height="128"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="142.33333333333334"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="wja-9s-hj1" secondAttribute="height" multiplier="34:33" id="cnB-78-cHy"/>
                                                 </constraints>
@@ -50,7 +51,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWG-ri-SJg">
-                                                <rect key="frame" x="132" y="0.0" width="132" height="128"/>
+                                                <rect key="frame" x="146.66666666666669" y="0.0" width="146.66666666666669" height="142.33333333333334"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ZWG-ri-SJg" secondAttribute="height" multiplier="34:33" id="sQY-Kc-cWs"/>
                                                 </constraints>
@@ -61,7 +62,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFN-yz-QZt">
-                                                <rect key="frame" x="264" y="0.0" width="132" height="128"/>
+                                                <rect key="frame" x="293.33333333333337" y="0.0" width="146.66666666666663" height="142.33333333333334"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="GFN-yz-QZt" secondAttribute="height" multiplier="34:33" id="LnL-dq-WPf"/>
                                                 </constraints>
@@ -74,10 +75,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNN-6U-vci" userLabel="ButtonBotSide">
-                                        <rect key="frame" x="0.0" y="128" width="396" height="128"/>
+                                        <rect key="frame" x="0.0" y="142.33333333333331" width="440" height="142.33333333333331"/>
                                         <subviews>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RM7-cw-nQ0">
-                                                <rect key="frame" x="0.0" y="0.0" width="132" height="128"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="142.33333333333334"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="RM7-cw-nQ0" secondAttribute="height" multiplier="34:33" id="3bU-X0-e49"/>
                                                 </constraints>
@@ -89,7 +90,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idh-Je-hrI">
-                                                <rect key="frame" x="132" y="0.0" width="132" height="128"/>
+                                                <rect key="frame" x="146.66666666666669" y="0.0" width="146.66666666666669" height="142.33333333333334"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="idh-Je-hrI" secondAttribute="height" multiplier="34:33" id="6mY-iF-PRr"/>
                                                 </constraints>
@@ -100,7 +101,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkd-aY-sd4">
-                                                <rect key="frame" x="264" y="0.0" width="132" height="128"/>
+                                                <rect key="frame" x="293.33333333333337" y="0.0" width="146.66666666666663" height="142.33333333333334"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="hkd-aY-sd4" secondAttribute="height" multiplier="34:33" id="FxI-wq-3CW"/>
                                                 </constraints>
@@ -115,7 +116,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-te-TO4" userLabel="HomeInfoStack">
-                                <rect key="frame" x="108" y="51.333333333333343" width="200" height="287.66666666666663"/>
+                                <rect key="frame" x="64" y="51.333333333333343" width="200" height="287.66666666666663"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeRealLogo" translatesAutoresizingMaskIntoConstraints="NO" id="yl4-Yi-yHN">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
@@ -157,15 +158,23 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bl5-NJ-qm9"/>
+                    <connections>
+                        <outlet property="allButton" destination="wja-9s-hj1" id="cUj-7M-aTl"/>
+                        <outlet property="characterButton" destination="idh-Je-hrI" id="cyF-2C-X7i"/>
+                        <outlet property="grammarButton" destination="ZWG-ri-SJg" id="7jt-iR-132"/>
+                        <outlet property="korHistoryButton" destination="GFN-yz-QZt" id="Y1T-cr-EoY"/>
+                        <outlet property="proverbButton" destination="RM7-cw-nQ0" id="QSJ-eb-rBP"/>
+                        <outlet property="scienceButton" destination="hkd-aY-sd4" id="bOY-ae-dPB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="55" y="-34"/>
         </scene>
-        <!--GameSettingView-->
+        <!--PlayerSettingView-->
         <scene sceneID="SRv-e1-GGf">
             <objects>
-                <viewControllerPlaceholder storyboardName="GameSettingView" id="ktg-NB-3FI" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="PlayerSettingView" id="ktg-NB-3FI" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="MHL-fv-dZ8"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ulf-MB-zzn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -177,13 +186,13 @@
         <segue reference="jb7-hv-1C9"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="homeAll" width="304" height="296"/>
-        <image name="homeChar" width="304" height="296"/>
-        <image name="homeGrammar" width="304" height="296"/>
-        <image name="homeKorHistory" width="304" height="296"/>
-        <image name="homeProb" width="304" height="296"/>
+        <image name="homeAll" width="152" height="148"/>
+        <image name="homeChar" width="152" height="148"/>
+        <image name="homeGrammar" width="152" height="148"/>
+        <image name="homeKorHistory" width="152" height="148"/>
+        <image name="homeProb" width="152" height="148"/>
         <image name="homeRealLogo" width="400" height="400"/>
-        <image name="homeScience" width="304" height="296"/>
+        <image name="homeScience" width="152" height="148"/>
         <namedColor name="BG">
             <color red="0.9570000171661377" green="1" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

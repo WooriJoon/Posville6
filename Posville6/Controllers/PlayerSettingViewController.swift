@@ -17,7 +17,7 @@ enum Category {
 }
 
 
-class GameSettingViewController: UIViewController {
+class PlayerSettingViewController: UIViewController {
     
     @IBOutlet weak var secondSheet: UIView!
     @IBOutlet weak var stepper: UIStepper!
