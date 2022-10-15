@@ -25,6 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="6cz-Me-xV0"/>
+                                            <constraint firstAttribute="width" secondItem="FMl-hP-a0A" secondAttribute="height" multiplier="1:1" id="gzd-o2-uQZ"/>
                                             <constraint firstAttribute="height" constant="60" id="kVW-ku-GJX"/>
                                         </constraints>
                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -67,7 +68,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="198" translatesAutoresizingMaskIntoConstraints="NO" id="V4c-gg-ix6">
                                 <rect key="frame" x="134" y="304" width="576" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="Player3" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-9d-xCV" userLabel="Player4" customClass="MyBtn" customModule="Posville6" customModuleProvider="target">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" restorationIdentifier="Player5" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-9d-xCV" userLabel="Player4" customClass="MyBtn" customModule="Posville6" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="8mT-Qd-RGL"/>
@@ -93,7 +94,7 @@
                                             <action selector="onButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8G2-Ec-BA6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" restorationIdentifier="Player5" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrJ-TS-BxD" userLabel="Player6" customClass="MyBtn" customModule="Posville6" customModuleProvider="target">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" restorationIdentifier="Player3" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrJ-TS-BxD" userLabel="Player6" customClass="MyBtn" customModule="Posville6" customModuleProvider="target">
                                         <rect key="frame" x="516" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Rf3-a9-NAc"/>
@@ -190,9 +191,9 @@
                         <outlet property="player0Button" destination="FMl-hP-a0A" id="5hB-bL-Ink"/>
                         <outlet property="player1Button" destination="xnk-ux-LLv" id="EjJ-cI-bwT"/>
                         <outlet property="player2Button" destination="r1p-GQ-Gkm" id="bGW-hh-WgT"/>
-                        <outlet property="player3Button" destination="jCn-9d-xCV" id="WLp-fL-QJr"/>
-                        <outlet property="player4Button" destination="d7c-0D-h40" id="c1v-e8-iwK"/>
-                        <outlet property="player5Button" destination="HrJ-TS-BxD" id="jRR-Ky-kiQ"/>
+                        <outlet property="player3Button" destination="HrJ-TS-BxD" id="535-gR-xhy"/>
+                        <outlet property="player4Button" destination="d7c-0D-h40" id="Swb-XV-ao3"/>
+                        <outlet property="player5Button" destination="jCn-9d-xCV" id="gBJ-Me-G0C"/>
                         <outlet property="playerCountSheet" destination="DEP-ty-Sk3" id="2Z2-Pm-MFR"/>
                     </connections>
                 </viewController>

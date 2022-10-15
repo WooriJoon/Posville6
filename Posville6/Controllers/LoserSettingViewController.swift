@@ -26,8 +26,16 @@ class LoserSettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+        
+//        [player0Image, player1Image, player2Image, player3Image, player4Image, player5Image]
+//        [0, 2, 4, 5]
+    }
+    
+    func setupUI() {
         categoryLabel.text = "\(category.rawValue) - \(gameMode.rawValue)"
-        loserCountLabel.text = "탈락자 수 \(playerIndex!.count)명"
+        loserCountLabel.text = "탈락자 수 1명"
+        
         
         loserCountSheet.layer.shadowOpacity = 0.3
         loserCountSheet.layer.shadowOffset = CGSize(width: 1.0, height: 4.0)
@@ -35,14 +43,28 @@ class LoserSettingViewController: UIViewController {
         loserCountSheet.layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
     }
     
+    func imageSetup() {
+        
+    }
     
     @IBAction func loserCountStepperTapped(_ sender: UIStepper) {
+        let currentValue = Int(sender.value)
+        
+        switch gameMode {
+        case .normal:
+            sender.maximumValue = Double(self.playerIndex!.count) - 1
+            loserCountLabel.text = "탈락자 수 \(currentValue)명"
+        case .fever:
+            sender.maximumValue = Double(10)
+            loserCountLabel.text = "사이클 수 \(currentValue)번"
+        }
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
+    // TODO: currentValue 넘기기, 3초 셀때 문제 가져오기
     @IBAction func startButtonTapped(_ sender: UIButton) {
     }
     

@@ -29,13 +29,13 @@
                                             <constraint firstAttribute="height" constant="60" id="bhS-Ay-gb8"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6oM-W9-Wg5">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6oM-W9-Wg5">
                                         <rect key="frame" x="258" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="6oM-W9-Wg5" secondAttribute="height" multiplier="1:1" id="Ryt-Ms-R0H"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VO0-Lc-muv">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VO0-Lc-muv">
                                         <rect key="frame" x="516" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="VO0-Lc-muv" secondAttribute="height" multiplier="1:1" id="c1d-5Y-tBe"/>
@@ -46,7 +46,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="198" translatesAutoresizingMaskIntoConstraints="NO" id="BBa-xa-mQA">
                                 <rect key="frame" x="118" y="304" width="576" height="60"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zfw-Z7-JoB">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zfw-Z7-JoB">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="Ux6-wo-yYE"/>
@@ -54,13 +54,13 @@
                                             <constraint firstAttribute="height" constant="60" id="eL4-m4-ipq"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="03e-8C-coY">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="03e-8C-coY">
                                         <rect key="frame" x="258" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="03e-8C-coY" secondAttribute="height" multiplier="1:1" id="KaI-pe-E2G"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s2e-Z8-wxO">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s2e-Z8-wxO">
                                         <rect key="frame" x="516" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="s2e-Z8-wxO" secondAttribute="height" multiplier="1:1" id="e1f-wW-SOs"/>
@@ -86,7 +86,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="5FI-Gr-Ssg">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="5FI-Gr-Ssg">
                                                 <rect key="frame" x="106.33333333333331" y="0.0" width="94" height="32"/>
                                                 <connections>
                                                     <action selector="loserCountStepperTapped:" destination="1nA-Xb-sbY" eventType="valueChanged" id="JaL-ZR-MmT"/>
@@ -155,6 +155,7 @@
                             <constraint firstItem="6tV-1t-By2" firstAttribute="top" secondItem="C0Y-fJ-NtS" secondAttribute="top" constant="16" id="fyG-U6-uL8"/>
                             <constraint firstItem="BBa-xa-mQA" firstAttribute="centerX" secondItem="C0Y-fJ-NtS" secondAttribute="centerX" id="l4K-VN-Voh"/>
                             <constraint firstItem="6tV-1t-By2" firstAttribute="centerX" secondItem="C0Y-fJ-NtS" secondAttribute="centerX" id="qtt-0k-cLa"/>
+                            <constraint firstItem="BBa-xa-mQA" firstAttribute="centerX" secondItem="C0Y-fJ-NtS" secondAttribute="centerX" id="za0-GS-szf"/>
                         </constraints>
                     </view>
                     <connections>

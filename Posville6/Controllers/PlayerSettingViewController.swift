@@ -65,7 +65,7 @@ final class PlayerSettingViewController: UIViewController {
             let loserVC = segue.destination as! LoserSettingViewController
             loserVC.category = category
             loserVC.gameMode = gameMode
-            loserVC.playerIndex = playersIndex
+            loserVC.playerIndex = playersIndex.sorted()
         }
     }
     

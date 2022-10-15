@@ -22,8 +22,6 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let gameSettingVC = segue.destination as! PlayerSettingViewController
@@ -45,6 +43,13 @@ final class HomeViewController: UIViewController {
             gameSettingVC.category = .science
         default:
             gameSettingVC.category = .all
+        }
+        
+        switch gameMode {
+        case .normal:
+            gameSettingVC.gameMode = .normal
+        case .fever:
+            gameSettingVC.gameMode = .fever
         }
     }
     
