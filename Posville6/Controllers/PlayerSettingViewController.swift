@@ -78,6 +78,12 @@ final class PlayerSettingViewController: UIViewController {
     // 따라서 플레이어 수가 2명 미만이면 return false를 통해 화면전환을 못하게 막습니다
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if playersIndex.count < 2 {
+            // 2명 미만이라 Alert을 띄웁니다
+            let alert = UIAlertController(title: "인원 부족", message: "최소 2명 이상의 플레이어가 필요합니다", preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "확인", style: .default)
+            alert.addAction(cancel)
+            present(alert, animated: true)
+            
             return false
         }
         return true
