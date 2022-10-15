@@ -6,13 +6,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--GameView-->
         <scene sceneID="giN-fe-gbf">
             <objects>
-                <viewController storyboardIdentifier="GameView" title="GameView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oHj-eg-ah3" customClass="LoserSettingViewController" customModule="Posville6" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameView" title="GameView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oHj-eg-ah3" customClass="GameViewController" customModule="Posville6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h4o-2X-NSN">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,11 +68,11 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <view alpha="0.89999997615814209" contentMode="scaleToFill" restorationIdentifier="GuideView2" translatesAutoresizingMaskIntoConstraints="NO" id="XFo-4K-tlg">
+                            <view alpha="0.89999997615814209" contentMode="scaleToFill" restorationIdentifier="GuideView2" translatesAutoresizingMaskIntoConstraints="NO" id="XFo-4K-tlg" userLabel="QuestionView">
                                 <rect key="frame" x="134" y="90" width="576" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="문제의 길이가 길 때 어떻게 되는지문제의 길이가 길 때 어떻게 되는지문제의 길이가 길 때 어떻게 되는지문제의 길이가 길 때 어떻게 되는지문제의 길이가 길 때 어떻게 95자" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDM-19-cdF" userLabel="QuestionLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="576" height="64"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="문제의 길이가 길 때 어떻게 되는지문제의 길이가 길 때 어떻게 되는지문제의 길이가 길 때 어떻게 되는지문제의 길이가 길 때 어떻게 되는지문제의 길이가 90자" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDM-19-cdF" userLabel="QuestionLabel">
+                                        <rect key="frame" x="16" y="0.0" width="544" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="n94-c7-cwg"/>
                                         </constraints>
@@ -80,7 +81,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zsE-eN-feU">
-                                        <rect key="frame" x="0.0" y="180" width="576" height="6"/>
+                                        <rect key="frame" x="16" y="180" width="544" height="6"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -166,17 +167,15 @@
                                     </stackView>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="YgD-Fd-dZ7"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="nDM-19-cdF" secondAttribute="trailing" id="4qg-nC-6Kw"/>
-                                    <constraint firstItem="nDM-19-cdF" firstAttribute="leading" secondItem="XFo-4K-tlg" secondAttribute="leading" id="8iT-kM-7Nj"/>
                                     <constraint firstItem="OQy-ck-NQu" firstAttribute="centerX" secondItem="XFo-4K-tlg" secondAttribute="centerX" id="ABC-J1-1Io"/>
                                     <constraint firstAttribute="height" constant="200" id="Bme-u6-BzN"/>
-                                    <constraint firstItem="nDM-19-cdF" firstAttribute="leading" secondItem="XFo-4K-tlg" secondAttribute="leading" id="DES-eS-PJF"/>
-                                    <constraint firstAttribute="trailing" secondItem="zsE-eN-feU" secondAttribute="trailing" id="GFY-wQ-xgo"/>
                                     <constraint firstAttribute="width" constant="576" id="Gwe-E5-mlO"/>
-                                    <constraint firstAttribute="trailing" secondItem="nDM-19-cdF" secondAttribute="trailing" id="Jly-fS-xxt"/>
-                                    <constraint firstItem="zsE-eN-feU" firstAttribute="leading" secondItem="XFo-4K-tlg" secondAttribute="leading" id="SZx-Id-kT5"/>
+                                    <constraint firstItem="nDM-19-cdF" firstAttribute="leading" secondItem="XFo-4K-tlg" secondAttribute="leading" constant="16" id="HYo-g5-CrN"/>
+                                    <constraint firstItem="zsE-eN-feU" firstAttribute="leading" secondItem="YgD-Fd-dZ7" secondAttribute="leading" constant="16" id="JzJ-da-0Ml"/>
                                     <constraint firstItem="OQy-ck-NQu" firstAttribute="top" secondItem="nDM-19-cdF" secondAttribute="bottom" constant="14" id="TJC-yC-NbI"/>
+                                    <constraint firstAttribute="trailing" secondItem="nDM-19-cdF" secondAttribute="trailing" constant="16" id="Vf6-bt-bwu"/>
                                     <constraint firstItem="bbT-Uh-08S" firstAttribute="centerX" secondItem="XFo-4K-tlg" secondAttribute="centerX" id="YKE-TU-jg6"/>
                                     <constraint firstItem="nDM-19-cdF" firstAttribute="top" secondItem="XFo-4K-tlg" secondAttribute="top" id="cp4-d1-uue"/>
                                     <constraint firstItem="zsE-eN-feU" firstAttribute="top" secondItem="bbT-Uh-08S" secondAttribute="bottom" constant="14" id="frT-sH-WZ2"/>
@@ -184,6 +183,7 @@
                                     <constraint firstItem="YgD-Fd-dZ7" firstAttribute="bottom" secondItem="zsE-eN-feU" secondAttribute="bottom" constant="14" id="vBs-0i-ySB"/>
                                     <constraint firstItem="nDM-19-cdF" firstAttribute="centerX" secondItem="XFo-4K-tlg" secondAttribute="centerX" id="vET-id-zWC"/>
                                     <constraint firstItem="bbT-Uh-08S" firstAttribute="top" secondItem="nDM-19-cdF" secondAttribute="bottom" constant="14" id="ys8-rz-LV2"/>
+                                    <constraint firstItem="YgD-Fd-dZ7" firstAttribute="trailing" secondItem="zsE-eN-feU" secondAttribute="trailing" constant="16" id="zhJ-LV-vxd"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -200,18 +200,21 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="categoryLabel" destination="nDM-19-cdF" id="lAJ-MW-7oq"/>
                         <outlet property="player0Image" destination="RnU-sg-Ill" id="O1x-DL-nAY"/>
                         <outlet property="player1Image" destination="q5U-0O-814" id="oSF-Xn-QlM"/>
                         <outlet property="player2Image" destination="cMX-pJ-5Xb" id="lyM-ee-QpH"/>
                         <outlet property="player3Image" destination="yht-CB-elV" id="ZZh-52-Q6X"/>
                         <outlet property="player4Image" destination="elA-wj-ShE" id="d6z-yw-i6u"/>
                         <outlet property="player5Image" destination="iCp-fB-bCk" id="gRO-SJ-R77"/>
+                        <outlet property="questionLabel" destination="nDM-19-cdF" id="jVl-JX-5zL"/>
+                        <outlet property="questionView" destination="XFo-4K-tlg" id="83D-Ah-wMc"/>
+                        <outlet property="threeButtonView" destination="OQy-ck-NQu" id="PKY-5U-LRw"/>
+                        <outlet property="twoButtonView" destination="bbT-Uh-08S" id="2Wh-EF-bI4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJv-Vs-jiz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="190" y="-306"/>
+            <point key="canvasLocation" x="242.41706161137441" y="-263.07692307692309"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
