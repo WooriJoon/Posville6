@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		114DA33228F27E44002F92C6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114DA33128F27E44002F92C6 /* Home.storyboard */; };
 		114DA33428F27E4E002F92C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114DA33328F27E4E002F92C6 /* HomeViewController.swift */; };
-		36C1C23328F2C74A0074CF30 /* SignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C1C23228F2C74A0074CF30 /* SignModel.swift */; };
 		36D19F4328F1C280008EB9EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D19F4228F1C280008EB9EC /* AppDelegate.swift */; };
 		36D19F4528F1C280008EB9EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D19F4428F1C280008EB9EC /* SceneDelegate.swift */; };
 		36D19F4C28F1C281008EB9EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36D19F4B28F1C281008EB9EC /* Assets.xcassets */; };
@@ -22,7 +21,6 @@
 /* Begin PBXFileReference section */
 		114DA33128F27E44002F92C6 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		114DA33328F27E4E002F92C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		36C1C23228F2C74A0074CF30 /* SignModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignModel.swift; sourceTree = "<group>"; };
 		36D19F3F28F1C280008EB9EC /* Posville6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posville6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36D19F4228F1C280008EB9EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36D19F4428F1C280008EB9EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +43,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		365F785B28FAA8D0003BFCE3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				114DA33128F27E44002F92C6 /* Home.storyboard */,
+				FB4884C228F2574C00109D14 /* GameSettingView.storyboard */,
+				36D19F4D28F1C281008EB9EC /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		365F785C28FAA8D4003BFCE3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				114DA33328F27E4E002F92C6 /* HomeViewController.swift */,
+				FB4884C428F2575800109D14 /* GameSettingViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		36D19F3628F1C280008EB9EC = {
 			isa = PBXGroup;
 			children = (
@@ -64,14 +81,11 @@
 		36D19F4128F1C280008EB9EC /* Posville6 */ = {
 			isa = PBXGroup;
 			children = (
-				36FEB03328F2A0BD001AD878 /* Models */,
 				36D19F4228F1C280008EB9EC /* AppDelegate.swift */,
 				36D19F4428F1C280008EB9EC /* SceneDelegate.swift */,
-				114DA33328F27E4E002F92C6 /* HomeViewController.swift */,
-				FB4884C428F2575800109D14 /* GameSettingViewController.swift */,
-				114DA33128F27E44002F92C6 /* Home.storyboard */,
-				FB4884C228F2574C00109D14 /* GameSettingView.storyboard */,
-				36D19F4D28F1C281008EB9EC /* LaunchScreen.storyboard */,
+				36FEB03328F2A0BD001AD878 /* Models */,
+				365F785B28FAA8D0003BFCE3 /* Views */,
+				365F785C28FAA8D4003BFCE3 /* Controllers */,
 				36D19F4B28F1C281008EB9EC /* Assets.xcassets */,
 				36D19F5028F1C281008EB9EC /* Info.plist */,
 			);
@@ -82,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				36FEB03428F2A0BD001AD878 /* Quiz.swift */,
-				36C1C23228F2C74A0074CF30 /* SignModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,7 +174,6 @@
 			files = (
 				36FEB03528F2A0BD001AD878 /* Quiz.swift in Sources */,
 				36D19F4328F1C280008EB9EC /* AppDelegate.swift in Sources */,
-				36C1C23328F2C74A0074CF30 /* SignModel.swift in Sources */,
 				36D19F4528F1C280008EB9EC /* SceneDelegate.swift in Sources */,
 				114DA33428F27E4E002F92C6 /* HomeViewController.swift in Sources */,
 				FB4884C528F2575800109D14 /* GameSettingViewController.swift in Sources */,
