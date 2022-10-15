@@ -12,6 +12,7 @@ final class HomeViewController: UIViewController {
     var gameMode: GameMode = .normal
     
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var segmentedController: UISegmentedControl!
     @IBOutlet weak var allButton: UIButton!
     @IBOutlet weak var grammarButton: UIButton!
     @IBOutlet weak var korHistoryButton: UIButton!
@@ -69,6 +70,9 @@ final class HomeViewController: UIViewController {
     func setupNormalMode() {
         self.view.backgroundColor = UIColor(named: "BG")
         
+        segmentedController.backgroundColor = .secondarySystemBackground
+//        segmentedController.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: UIControl.State.selected)
+        
         descriptionLabel.text = "친구들과 짜릿한 퀴즈 서바이벌을 즐겨보세요!"
         descriptionLabel.textColor = .black
         
@@ -82,6 +86,9 @@ final class HomeViewController: UIViewController {
     
     func setupFeverMode() {
         self.view.backgroundColor = UIColor(named: "feverBackground")
+        
+        segmentedController.backgroundColor = .darkGray
+//        segmentedController.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
         
         descriptionLabel.text = "끝나지 않는 지옥의 레이스를 즐겨보세요!"
         descriptionLabel.textColor = .white

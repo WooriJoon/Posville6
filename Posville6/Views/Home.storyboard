@@ -166,6 +166,7 @@
                         <outlet property="korHistoryButton" destination="GFN-yz-QZt" id="Y1T-cr-EoY"/>
                         <outlet property="proverbButton" destination="RM7-cw-nQ0" id="QSJ-eb-rBP"/>
                         <outlet property="scienceButton" destination="hkd-aY-sd4" id="bOY-ae-dPB"/>
+                        <outlet property="segmentedController" destination="wCf-9r-QUH" id="JHs-ii-R71"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
