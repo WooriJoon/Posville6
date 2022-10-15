@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum GameMode {
+enum Category {
     case all
     case grammar
     case krHistory
@@ -15,6 +15,7 @@ enum GameMode {
     case character
     case science
 }
+
 
 class GameSettingViewController: UIViewController {
     
@@ -31,6 +32,7 @@ class GameSettingViewController: UIViewController {
 	@IBOutlet var player4Button: MyBtn!
 	@IBOutlet var player5Button: MyBtn!
     
+    var category: Category?
     var gameMode: GameMode?
     
     lazy var buttons: [MyBtn] = [
@@ -63,7 +65,7 @@ class GameSettingViewController: UIViewController {
     }
     
     func setupUI() {
-        switch gameMode {
+        switch category {
         case .all:
             gameModeLabel.text = "전체 - 일반모드"
         case .grammar:

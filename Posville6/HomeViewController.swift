@@ -7,51 +7,49 @@
 
 import UIKit
 
+enum GameMode {
+    case normal
+    case fever
+}
+
 class HomeViewController: UIViewController {
+    
+    var gameMode: GameMode = .normal
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let GameSettingVC = segue.destination as! GameSettingViewController
+        let gameSettingVC = segue.destination as! GameSettingViewController
+        
+        gameSettingVC.gameMode = gameMode
         
         switch segue.identifier {
         case "toGameSettingView0":
-            GameSettingVC.gameMode = .all
+            gameSettingVC.category = .all
         case "toGameSettingView1":
-            GameSettingVC.gameMode = .grammar
+            gameSettingVC.category = .grammar
         case "toGameSettingView2":
-            GameSettingVC.gameMode = .krHistory
+            gameSettingVC.category = .krHistory
         case "toGameSettingView3":
-            GameSettingVC.gameMode = .proverb
+            gameSettingVC.category = .proverb
         case "toGameSettingView4":
-            GameSettingVC.gameMode = .character
+            gameSettingVC.category = .character
         case "toGameSettingView5":
-            GameSettingVC.gameMode = .science
+            gameSettingVC.category = .science
         default:
-            GameSettingVC.gameMode = .all
+            gameSettingVC.category = .all
         }
     }
     
-    @IBAction func allButtonTapped(_ sender: UIButton) {
-        
-        
-        
+    @IBAction func modeChange(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            gameMode = .normal
+        } else {
+            gameMode = .fever
+        }
     }
     
 }
