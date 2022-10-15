@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		114DA33228F27E44002F92C6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114DA33128F27E44002F92C6 /* Home.storyboard */; };
 		114DA33428F27E4E002F92C6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114DA33328F27E4E002F92C6 /* HomeViewController.swift */; };
+		364150AD28FABB2F001145AD /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364150AC28FABB2F001145AD /* GameModel.swift */; };
 		365F785E28FAB148003BFCE3 /* LoserSettingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 365F785D28FAB148003BFCE3 /* LoserSettingView.storyboard */; };
 		365F786028FAB15C003BFCE3 /* LoserSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365F785F28FAB15C003BFCE3 /* LoserSettingViewController.swift */; };
 		36D19F4328F1C280008EB9EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D19F4228F1C280008EB9EC /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		114DA33128F27E44002F92C6 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		114DA33328F27E4E002F92C6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		364150AC28FABB2F001145AD /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		365F785D28FAB148003BFCE3 /* LoserSettingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoserSettingView.storyboard; sourceTree = "<group>"; };
 		365F785F28FAB15C003BFCE3 /* LoserSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoserSettingViewController.swift; sourceTree = "<group>"; };
 		36D19F3F28F1C280008EB9EC /* Posville6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posville6.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				36FEB03428F2A0BD001AD878 /* Quiz.swift */,
+				364150AC28FABB2F001145AD /* GameModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				365F786028FAB15C003BFCE3 /* LoserSettingViewController.swift in Sources */,
 				36D19F4528F1C280008EB9EC /* SceneDelegate.swift in Sources */,
 				114DA33428F27E4E002F92C6 /* HomeViewController.swift in Sources */,
+				364150AD28FABB2F001145AD /* GameModel.swift in Sources */,
 				FB4884C528F2575800109D14 /* PlayerSettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
