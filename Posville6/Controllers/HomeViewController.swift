@@ -23,6 +23,7 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    // segue를 이용해 다음 뷰로 넘어갈때 어떤 정보를 넘겨야할지 준비하는 메소드
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let gameSettingVC = segue.destination as! PlayerSettingViewController
@@ -54,6 +55,7 @@ final class HomeViewController: UIViewController {
         }
     }
     
+    // 모드 변경 세그먼티드 컨트롤을 탭했을때 불리는 메소드
     @IBAction func modeChange(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             gameMode = .normal

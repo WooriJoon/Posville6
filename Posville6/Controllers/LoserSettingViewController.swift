@@ -52,6 +52,7 @@ private extension LoserSettingViewController {
         loserCountSheet.layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
     }
     
+    // 선택된 플레이어의 자리에만 플레이어 이미지를 보여줍니다
     func imageSetup() {
         for idx in playerIndex! {
             playerImages[idx].image = UIImage(named: "player\(idx)")
@@ -62,6 +63,8 @@ private extension LoserSettingViewController {
 // MARK: IBAction Methods.
 // 버튼 액션과 관련된 메서드들입니다.
 extension LoserSettingViewController {
+    
+    // 세그먼티드 컨트롤 눌렸을때
     @IBAction func loserCountStepperTapped(_ sender: UIStepper) {
         let currentValue = Int(sender.value)
         switch gameMode {
@@ -74,11 +77,14 @@ extension LoserSettingViewController {
         }
     }
     
+    // 이전 버튼
     @IBAction func backButtonTapped(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
     
     // TODO: currentValue 넘기기, 3초 셀때 문제 가져오기
     @IBAction func startButtonTapped(_ sender: UIButton) {
+        
     }
+    
 }
