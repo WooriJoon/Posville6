@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1nA-Xb-sbY">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--GameSettingView-->
+        <!--LoserSettingView-->
         <scene sceneID="iXp-Et-LjB">
             <objects>
-                <viewController storyboardIdentifier="GameSettingView" title="GameSettingView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1nA-Xb-sbY" customClass="LoserSettingViewController" customModule="Posville6" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoserSettingView" title="LoserSettingView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1nA-Xb-sbY" customClass="LoserSettingViewController" customModule="Posville6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C0Y-fJ-NtS">
                         <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,7 +90,6 @@
                                                 <rect key="frame" x="106.33333333333331" y="0.0" width="94" height="32"/>
                                                 <connections>
                                                     <action selector="loserCountStepperTapped:" destination="1nA-Xb-sbY" eventType="valueChanged" id="rRv-dD-4ZJ"/>
-                                                    <action selector="stepperTapped:" destination="1nA-Xb-sbY" eventType="valueChanged" id="beZ-PL-vtI"/>
                                                 </connections>
                                             </stepper>
                                         </subviews>
@@ -109,7 +108,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="backButtonTapped:" destination="1nA-Xb-sbY" eventType="touchUpInside" id="nhB-Nr-apA"/>
-                                            <action selector="previousButtonTapped:" destination="1nA-Xb-sbY" eventType="touchUpInside" id="xX7-xh-4hJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="NextButton2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCt-Iu-LyW">
@@ -168,8 +166,6 @@
                         <outlet property="player3Image" destination="Zfw-Z7-JoB" id="rXr-iL-1aJ"/>
                         <outlet property="player4Image" destination="03e-8C-coY" id="m7t-n4-AKm"/>
                         <outlet property="player5Image" destination="s2e-Z8-wxO" id="8QJ-2z-CvQ"/>
-                        <outlet property="secondSheet" destination="vhK-q5-QZw" id="c3I-8o-bcD"/>
-                        <outlet property="stepper" destination="5FI-Gr-Ssg" id="ncb-97-xeG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNT-UQ-Yhz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

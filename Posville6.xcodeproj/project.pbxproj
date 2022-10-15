@@ -18,6 +18,7 @@
 		36FEB03528F2A0BD001AD878 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36FEB03428F2A0BD001AD878 /* Quiz.swift */; };
 		FB4884C328F2574C00109D14 /* PlayerSettingView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4884C228F2574C00109D14 /* PlayerSettingView.storyboard */; };
 		FB4884C528F2575800109D14 /* PlayerSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4884C428F2575800109D14 /* PlayerSettingViewController.swift */; };
+		FBA44CA528FAB7D1003BDF17 /* GameView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBA44CA428FAB7D1003BDF17 /* GameView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		36FEB03428F2A0BD001AD878 /* Quiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
 		FB4884C228F2574C00109D14 /* PlayerSettingView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayerSettingView.storyboard; sourceTree = "<group>"; };
 		FB4884C428F2575800109D14 /* PlayerSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSettingViewController.swift; sourceTree = "<group>"; };
+		FBA44CA428FAB7D1003BDF17 /* GameView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 				114DA33128F27E44002F92C6 /* Home.storyboard */,
 				FB4884C228F2574C00109D14 /* PlayerSettingView.storyboard */,
 				365F785D28FAB148003BFCE3 /* LoserSettingView.storyboard */,
+				FBA44CA428FAB7D1003BDF17 /* GameView.storyboard */,
 				36D19F4D28F1C281008EB9EC /* LaunchScreen.storyboard */,
 			);
 			path = Views;
@@ -169,6 +172,7 @@
 				36D19F4C28F1C281008EB9EC /* Assets.xcassets in Resources */,
 				114DA33228F27E44002F92C6 /* Home.storyboard in Resources */,
 				365F785E28FAB148003BFCE3 /* LoserSettingView.storyboard in Resources */,
+				FBA44CA528FAB7D1003BDF17 /* GameView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
