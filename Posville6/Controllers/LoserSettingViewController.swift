@@ -20,7 +20,7 @@ class LoserSettingViewController: UIViewController {
     @IBOutlet weak var loserCountLabel: UILabel!
     
     var category: Category?
-    var playerCount: Int?
+    var playerIndex: [Int]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,17 +28,15 @@ class LoserSettingViewController: UIViewController {
         
     }
     
+    
     @IBAction func loserCountStepperTapped(_ sender: UIStepper) {
-        
     }
     
-    
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
-        
     }
     
 }

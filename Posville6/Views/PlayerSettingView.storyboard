@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--GameSettingView-->
+        <!--PlayerSettingView-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="GameSettingView" title="GameSettingView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="PlayerSettingViewController" customModule="Posville6" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayerSettingView" title="PlayerSettingView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="PlayerSettingViewController" customModule="Posville6" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,7 +152,7 @@
                                             <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="playerCountSelected:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qhJ-uu-TD2"/>
+                                            <segue destination="lWg-BZ-OIS" kind="show" id="qDc-Ni-pgv"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -199,6 +199,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="191" y="-31"/>
+        </scene>
+        <!--LoserSettingView-->
+        <scene sceneID="TA7-Eh-xwG">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="toLoserSettingView" storyboardName="LoserSettingView" id="lWg-BZ-OIS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5MQ-Xl-7eV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kcS-6f-Pzc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="690" y="6"/>
         </scene>
     </scenes>
     <resources>

@@ -7,12 +7,7 @@
 
 import UIKit
 
-enum GameMode {
-    case normal
-    case fever
-}
-
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
     
     var gameMode: GameMode = .normal
     
