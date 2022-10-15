@@ -46,22 +46,22 @@ class PlayerSettingViewController: UIViewController {
     var loserCount = 1
     
 	override func viewDidLoad() {
-        stepper.value = 1
-        loserCountLabel.text = "탈락자 수 \(Int(stepper.value))명"
+//        stepper.value = 1
+//        loserCountLabel.text = "탈락자 수 \(Int(stepper.value))명"
         
         popSecondSheet()
         setupUI()
 	}
     
     func stackSecondSheet() {
-        secondSheet.alpha = 1
-        secondSheet.isUserInteractionEnabled = true
+//        secondSheet.alpha = 1
+//        secondSheet.isUserInteractionEnabled = true
     }
     
     func popSecondSheet() {
-        secondSheet.alpha = 0
-        secondSheet.isUserInteractionEnabled = false
-        stepper.value = 1
+//        secondSheet.alpha = 0
+//        secondSheet.isUserInteractionEnabled = false
+//        stepper.value = 1
     }
     
     func setupUI() {
@@ -124,7 +124,7 @@ class PlayerSettingViewController: UIViewController {
         }
         
         // MARK: 1번. 현재 시트 -> 탈락자 고르는 시트로 UIView 전환.
-        stackSecondSheet()
+//        stackSecondSheet()
     }
     
     // "이전 버튼" 눌렸을 때, 다시 버튼 잠긴 거 풀어주는 함수.
