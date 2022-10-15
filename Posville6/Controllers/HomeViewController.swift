@@ -11,6 +11,7 @@ final class HomeViewController: UIViewController {
     
     var gameMode: GameMode = .normal
     
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var allButton: UIButton!
     @IBOutlet weak var grammarButton: UIButton!
     @IBOutlet weak var korHistoryButton: UIButton!
@@ -56,16 +57,39 @@ final class HomeViewController: UIViewController {
     @IBAction func modeChange(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             gameMode = .normal
+            setupNormalMode()
         } else {
             gameMode = .fever
             setupFeverMode()
         }
     }
     
+    func setupNormalMode() {
+        self.view.backgroundColor = UIColor(named: "BG")
+        
+        descriptionLabel.text = "친구들과 짜릿한 퀴즈 서바이벌을 즐겨보세요!"
+        descriptionLabel.textColor = .black
+        
+        allButton.setBackgroundImage(UIImage(named: "homeAll"), for: .normal)
+        grammarButton.setBackgroundImage(UIImage(named: "homeGrammar"), for: .normal)
+        korHistoryButton.setBackgroundImage(UIImage(named: "homeKorHistory"), for: .normal)
+        proverbButton.setBackgroundImage(UIImage(named: "homeProv"), for: .normal)
+        characterButton.setBackgroundImage(UIImage(named: "homeChar"), for: .normal)
+        scienceButton.setBackgroundImage(UIImage(named: "homeScience"), for: .normal)
+    }
+    
     func setupFeverMode() {
         self.view.backgroundColor = UIColor(named: "feverBackground")
-        allButton.setBackgroundImage(UIImage(named: "homeFeverAll"), for: .normal)
         
+        descriptionLabel.text = "끝나지 않는 지옥의 레이스를 즐겨보세요!"
+        descriptionLabel.textColor = .white
+        
+        allButton.setBackgroundImage(UIImage(named: "homeFeverAll"), for: .normal)
+        grammarButton.setBackgroundImage(UIImage(named: "homeFeverGrammar"), for: .normal)
+        korHistoryButton.setBackgroundImage(UIImage(named: "homeFeverKorHistory"), for: .normal)
+        proverbButton.setBackgroundImage(UIImage(named: "homeFeverProv"), for: .normal)
+        characterButton.setBackgroundImage(UIImage(named: "homeFeverChar"), for: .normal)
+        scienceButton.setBackgroundImage(UIImage(named: "homeFeverScience"), for: .normal)
     }
     
 }

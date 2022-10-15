@@ -84,7 +84,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="   " backgroundImage="homeProb"/>
+                                                <state key="normal" title="   " backgroundImage="homeProv"/>
                                                 <connections>
                                                     <segue destination="ktg-NB-3FI" kind="show" identifier="toGameSettingView3" id="JLX-dL-Hqi"/>
                                                 </connections>
@@ -161,6 +161,7 @@
                     <connections>
                         <outlet property="allButton" destination="wja-9s-hj1" id="cUj-7M-aTl"/>
                         <outlet property="characterButton" destination="idh-Je-hrI" id="cyF-2C-X7i"/>
+                        <outlet property="descriptionLabel" destination="XLi-QF-wcR" id="Nn5-Xf-512"/>
                         <outlet property="grammarButton" destination="ZWG-ri-SJg" id="7jt-iR-132"/>
                         <outlet property="korHistoryButton" destination="GFN-yz-QZt" id="Y1T-cr-EoY"/>
                         <outlet property="proverbButton" destination="RM7-cw-nQ0" id="QSJ-eb-rBP"/>
@@ -190,7 +191,7 @@
         <image name="homeChar" width="152" height="148"/>
         <image name="homeGrammar" width="152" height="148"/>
         <image name="homeKorHistory" width="152" height="148"/>
-        <image name="homeProb" width="152" height="148"/>
+        <image name="homeProv" width="152" height="148"/>
         <image name="homeRealLogo" width="400" height="400"/>
         <image name="homeScience" width="152" height="148"/>
         <namedColor name="BG">
