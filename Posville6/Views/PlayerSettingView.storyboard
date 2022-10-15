@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -27,7 +28,6 @@
                                             <constraint firstAttribute="width" secondItem="FMl-hP-a0A" secondAttribute="height" multiplier="1:1" id="gzd-o2-uQZ"/>
                                             <constraint firstAttribute="height" constant="60" id="kVW-ku-GJX"/>
                                         </constraints>
-                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
@@ -42,7 +42,6 @@
                                             <constraint firstAttribute="width" constant="60" id="80N-FC-ANV"/>
                                             <constraint firstAttribute="height" constant="60" id="nNe-ui-D8e"/>
                                         </constraints>
-                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule"/>
                                         <connections>
@@ -55,7 +54,6 @@
                                             <constraint firstAttribute="height" constant="60" id="5MG-tO-T8k"/>
                                             <constraint firstAttribute="width" constant="60" id="kuF-OC-U8e"/>
                                         </constraints>
-                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule"/>
                                         <connections>
@@ -73,7 +71,6 @@
                                             <constraint firstAttribute="height" constant="60" id="8mT-Qd-RGL"/>
                                             <constraint firstAttribute="width" constant="60" id="R1v-3E-svL"/>
                                         </constraints>
-                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule"/>
                                         <connections>
@@ -86,7 +83,6 @@
                                             <constraint firstAttribute="width" constant="60" id="L9I-TU-YPY"/>
                                             <constraint firstAttribute="height" constant="60" id="jVG-or-tav"/>
                                         </constraints>
-                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule"/>
                                         <connections>
@@ -99,7 +95,6 @@
                                             <constraint firstAttribute="height" constant="60" id="Rf3-a9-NAc"/>
                                             <constraint firstAttribute="width" constant="60" id="bU8-ah-srz"/>
                                         </constraints>
-                                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule"/>
                                         <connections>
@@ -211,6 +206,7 @@
             <point key="canvasLocation" x="690" y="6"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="BG"/>
     <resources>
         <image name="basicButton" width="60" height="60"/>
         <namedColor name="BG">
