@@ -25,7 +25,7 @@
 <br/>
 
 ## 👥 Contributor
-|<img src="https://user-images.githubusercontent.com/103024858/195070714-43961c91-b0ef-4722-9ae1-8872e65dcbf5.png" width="175" height="175">|<img src="https://user-images.githubusercontent.com/103024858/195070878-b2e50f3d-6377-4d06-9f5f-7b15207797fc.png" width="175" height="175">|<img src="https://user-images.githubusercontent.com/103024858/195071184-72e6b516-edca-42c0-9b1f-5a11d21c65f4.png" width="175" height="175">|<img src="https://user-images.githubusercontent.com/103024858/195071281-623852e8-6a5b-4af6-a56c-f9e5eb9ad908.png" width="175" height="175">|<img src="https://user-images.githubusercontent.com/103024858/195071297-30e2dbb6-5035-4de4-833c-163fea84cff0.png" width="175" height="175">|
+|<img src="https://user-images.githubusercontent.com/103024858/195070714-43961c91-b0ef-4722-9ae1-8872e65dcbf5.png" width="150" height="150">|<img src="https://user-images.githubusercontent.com/103024858/195070878-b2e50f3d-6377-4d06-9f5f-7b15207797fc.png" width="150" height="150">|<img src="https://user-images.githubusercontent.com/103024858/195071184-72e6b516-edca-42c0-9b1f-5a11d21c65f4.png" width="150" height="150">|<img src="https://user-images.githubusercontent.com/103024858/195071281-623852e8-6a5b-4af6-a56c-f9e5eb9ad908.png" width="150" height="150">|<img src="https://user-images.githubusercontent.com/103024858/195071297-30e2dbb6-5035-4de4-833c-163fea84cff0.png" width="150" height="150">|
 |:-:|:-:|:-:|:-:|:-:|
 |[꼬마](https://github.com/hminkim)|[준](https://github.com/ChickenJoah)|[루이](https://github.com/100seo)|[안토니](https://github.com/jsh9611)|[탐나](https://github.com/BrightHyeon)|
 <br/>
