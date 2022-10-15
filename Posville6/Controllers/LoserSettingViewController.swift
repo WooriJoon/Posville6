@@ -16,6 +16,7 @@ class LoserSettingViewController: UIViewController {
     @IBOutlet weak var player4Image: UIImageView!
     @IBOutlet weak var player5Image: UIImageView!
     @IBOutlet weak var loserCountSheet: UIView!
+    @IBOutlet weak var valueStepper: UIStepper!
     
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var loserCountLabel: UILabel!
@@ -35,11 +36,12 @@ class LoserSettingViewController: UIViewController {
 }
 
 // MARK: UI Setup related Methods.
-// UI 초기설정과 관련된 메서드들입니다.
+// 초기설정과 관련된 메서드들입니다.
 private extension LoserSettingViewController {
     func setupUI() {
         sheetSetup()
         imageSetup()
+        stepperSetup()
     }
     
     func sheetSetup() {
@@ -58,6 +60,15 @@ private extension LoserSettingViewController {
             playerImages[idx].image = UIImage(named: "player\(idx)")
         }
     }
+    
+    func stepperSetup() {
+        switch gameMode {
+        case .normal:
+            valueStepper.maximumValue = Double(self.playerIndex!.count) - 1
+        case .fever:
+            valueStepper.maximumValue = Double(10)
+        }
+    }
 }
 
 // MARK: IBAction Methods.
@@ -69,10 +80,8 @@ extension LoserSettingViewController {
         let currentValue = Int(sender.value)
         switch gameMode {
         case .normal:
-            sender.maximumValue = Double(self.playerIndex!.count) - 1
             loserCountLabel.text = "탈락자 수 \(currentValue)명"
         case .fever:
-            sender.maximumValue = Double(10)
             loserCountLabel.text = "사이클 수 \(currentValue)번"
         }
     }
