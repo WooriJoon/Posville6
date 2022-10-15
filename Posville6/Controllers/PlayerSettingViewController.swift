@@ -60,6 +60,15 @@ final class PlayerSettingViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toLoserVC" {
+            let loserVC = segue.destination as! LoserSettingViewController
+            loserVC.category = category
+            loserVC.gameMode = gameMode
+            loserVC.playerIndex = playersIndex
+        }
+    }
+    
     // TODO: 플레이어 수가 2명 미만일 때 다음버튼 눌렀을때 Alert 창을 띄워야함
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if playersIndex.count < 2 {

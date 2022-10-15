@@ -160,6 +160,7 @@
                     <connections>
                         <outlet property="categoryLabel" destination="Jqp-Ml-5Dc" id="EON-1e-DQw"/>
                         <outlet property="loserCountLabel" destination="Z1w-X3-Huq" id="Yut-yQ-tip"/>
+                        <outlet property="loserCountSheet" destination="vhK-q5-QZw" id="LY2-tg-SIu"/>
                         <outlet property="player0Image" destination="gBB-PF-beA" id="40p-BS-8aN"/>
                         <outlet property="player1Image" destination="6oM-W9-Wg5" id="40H-8e-uPC"/>
                         <outlet property="player2Image" destination="VO0-Lc-muv" id="Gu9-Hb-Kj1"/>
