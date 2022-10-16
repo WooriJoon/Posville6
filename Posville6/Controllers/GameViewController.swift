@@ -153,15 +153,28 @@ extension GameViewController {
 extension GameViewController {
 	
 	@IBAction func pauseButtonTapped(_ sender: UIButton) {
-		pause()
+		if gameMode == .normal {
+			pauseForNormal()
+		} else {
+			pauseForFever()
+		}
 	}
 	
-	func pause() {
+	func pauseForNormal() {
 		let alert = UIAlertController(title: "일시정지", message: "게임에서 정말 나가시겠습니까?", preferredStyle: .alert)
-		let cancel = UIAlertAction(title: "취소", style: .default)
-		let exit = UIAlertAction(title: "나가기", style: .cancel)
-		alert.addAction(exit)
-		alert.addAction(cancel)
+		alert.addAction(UIAlertAction(title: "나가기", style: .default, handler: { exitAction in
+			self.navigationController?.popToRootViewController(animated: true)
+		}))
+		alert.addAction(UIAlertAction(title: "취소", style: .cancel))
+
+		present(alert, animated: true)
+	}
+	
+	func pauseForFever() {
+		let alert = UIAlertController(title: "일시정지", message: "야레야레, 피버모드는 나가기따윈 없다구?", preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "취소", style: .default))
+		alert.addAction(UIAlertAction(title: "취소", style: .default))
+
 		present(alert, animated: true)
 	}
 }
