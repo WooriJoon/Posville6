@@ -232,7 +232,7 @@ extension GameViewController {
 			self.navigationController?.popToRootViewController(animated: true)
 		}))
 		alert.addAction(UIAlertAction(title: "취소", style: .cancel))
-
+		
 		present(alert, animated: true)
 	}
 	
@@ -240,7 +240,7 @@ extension GameViewController {
 		let alert = UIAlertController(title: "일시정지", message: "야레야레, 피버모드는 나가기따윈 없다구?", preferredStyle: .alert)
 		alert.addAction(UIAlertAction(title: "취소", style: .default))
 		alert.addAction(UIAlertAction(title: "취소", style: .default))
-
+		
 		present(alert, animated: true)
 	}
 }
@@ -342,7 +342,29 @@ extension GameViewController {
     }
 }
 
+
 /*
  1. imageSetup 함수 안에서 초기 세팅하고, currentPlayers 배열 완성.
  2. selectFirstPlayer 로직에서 currentPlayers 중심으로 로직을 수정.
  */
+
+//MARK: Card Flip Animation
+extension GameViewController {
+	func FlipByPlayerLocation() {
+		// 플레이어의 위 아래 위치에 따라 플립 로직 추가
+	}
+	
+	func downQuestionView() {
+		UIView.transition(with: questionView, duration: 0.5, options: .transitionFlipFromTop) {
+			self.questionView.transform = CGAffineTransformMakeScale(1, -1)
+		}
+		questionView.transform = CGAffineTransformMakeScale(-1, -1)
+	}
+	func upQuestionView() {
+		UIView.transition(with: questionView, duration: 0.5, options: .transitionFlipFromBottom) {
+			self.questionView.transform = CGAffineTransformMakeScale(-1, 1)
+		}
+		questionView.transform = CGAffineTransformMakeScale(1, 1)
+	}
+}
+
