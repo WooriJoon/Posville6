@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreGraphics
 
 class GameViewController: UIViewController {
     
@@ -45,6 +46,14 @@ class GameViewController: UIViewController {
         player0Image, player1Image, player2Image, player3Image, player4Image, player5Image
     ]
     var currentPlayers: [UIImageView] = [] // current Players's imageView
+    var isFirst: Bool = true
+    var isReversed: Bool = false {
+        didSet {
+            if oldValue != isReversed && !isFirst {
+                flipByPlayerLocation()
+            }
+        }
+    }
     
     @IBOutlet weak var timeBar: UIProgressView!
     
@@ -53,11 +62,11 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timeBar.progress = 0.0
-        setupUI()
         setupQuiz()
         setupQuestionView()
         imageSetup()
         selectFirstPlayer()
+        setupUI() // 여기서 순서 이동시키지 마십시오. selectFirstPlayer에서 현재 인덱스가 정해지면, 그 값 사용합니다.
     }
     
     func setupUI() {
@@ -66,6 +75,13 @@ class GameViewController: UIViewController {
         questionView.layer.shadowOffset = CGSize(width: 1.0, height: 4.0)
         questionView.layer.shadowRadius = 4
         questionView.layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
+        
+        // 초기 QuestionView 방향 설정.
+        if currentPlayerIndex! < 3 {
+            questionView.transform = CGAffineTransform(scaleX: -1, y: -1)
+            isReversed = true
+        }
+        isFirst = false
     }
     
     func setupQuiz() {
@@ -178,6 +194,12 @@ class GameViewController: UIViewController {
             // 반대편 사람이면 플립
             // 새로운 문제로 갈아끼움
             setupQuestionView()
+        }
+        
+        if currentPlayerIndex! < 3 {
+            isReversed = true
+        } else {
+            isReversed = false
         }
     }
     
@@ -350,21 +372,26 @@ extension GameViewController {
 
 //MARK: Card Flip Animation
 extension GameViewController {
-	func FlipByPlayerLocation() {
+	func flipByPlayerLocation() {
 		// 플레이어의 위 아래 위치에 따라 플립 로직 추가
+        if isReversed {
+            downQuestionView()
+        } else {
+            upQuestionView()
+        }
 	}
 	
 	func downQuestionView() {
 		UIView.transition(with: questionView, duration: 0.5, options: .transitionFlipFromTop) {
-			self.questionView.transform = CGAffineTransformMakeScale(1, -1)
+            self.questionView.transform = CGAffineTransform(scaleX: 1, y: -1)
 		}
-		questionView.transform = CGAffineTransformMakeScale(-1, -1)
+		questionView.transform = CGAffineTransform(scaleX: -1, y: -1)
 	}
 	func upQuestionView() {
 		UIView.transition(with: questionView, duration: 0.5, options: .transitionFlipFromBottom) {
-			self.questionView.transform = CGAffineTransformMakeScale(-1, 1)
+			self.questionView.transform = CGAffineTransform(scaleX: -1, y: 1)
 		}
-		questionView.transform = CGAffineTransformMakeScale(1, 1)
+		questionView.transform = CGAffineTransform(scaleX: 1, y: 1)
 	}
 }
 
