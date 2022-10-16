@@ -68,10 +68,10 @@
 		365F785C28FAA8D4003BFCE3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FBD535C128FADAC600073C17 /* GameViewController.swift */,
 				114DA33328F27E4E002F92C6 /* HomeViewController.swift */,
 				FB4884C428F2575800109D14 /* PlayerSettingViewController.swift */,
 				365F785F28FAB15C003BFCE3 /* LoserSettingViewController.swift */,
+				FBD535C128FADAC600073C17 /* GameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

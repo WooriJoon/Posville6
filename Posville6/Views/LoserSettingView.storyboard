@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1nA-Xb-sbY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1nA-Xb-sbY">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -49,7 +50,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Zfw-Z7-JoB" secondAttribute="height" multiplier="1:1" id="92Y-eP-Pr9"/>
-                                            <constraint firstAttribute="height" constant="60" id="9LE-Db-8Zv"/>
                                             <constraint firstAttribute="width" constant="60" id="Ux6-wo-yYE"/>
                                         </constraints>
                                     </imageView>
@@ -123,6 +123,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="startButtonTapped:" destination="1nA-Xb-sbY" eventType="touchUpInside" id="HHg-jb-lbR"/>
+                                            <segue destination="VE6-Dw-TB3" kind="show" identifier="toGameVC" id="oP7-3V-FOn"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -173,6 +174,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNT-UQ-Yhz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="191" y="-31"/>
+        </scene>
+        <!--GameView-->
+        <scene sceneID="zgy-at-qYP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GameView" id="VE6-Dw-TB3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7X1-lw-uBD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XOI-jO-sce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="737" y="-39"/>
         </scene>
     </scenes>
     <resources>
