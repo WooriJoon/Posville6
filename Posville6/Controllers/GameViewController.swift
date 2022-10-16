@@ -44,6 +44,7 @@ class GameViewController: UIViewController {
     lazy var playerImages: [UIImageView] = [
         player0Image, player1Image, player2Image, player3Image, player4Image, player5Image
     ]
+    var currentPlayers: [UIImageView] = [] // current Players's imageView
     
     @IBOutlet weak var timeBar: UIProgressView!
     
@@ -53,10 +54,21 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         timeBar.progress = 0.0
         setupUI()
+        
+        setupPlayers()
+        
         setupQuiz()
         setupQuestionView()
         imageSetup()
         selectFirstPlayer()
+    }
+    
+    // MARK: - Tamna Logic
+    func setupPlayers() {
+        guard let playerIndex = playerIndex else { return }
+        for idx in playerIndex {
+            currentPlayers.append(playerImages[idx])
+        }
     }
     
     func setupUI() {
