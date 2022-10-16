@@ -54,21 +54,10 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         timeBar.progress = 0.0
         setupUI()
-        
-        setupPlayers()
-        
         setupQuiz()
         setupQuestionView()
         imageSetup()
         selectFirstPlayer()
-    }
-    
-    // MARK: - Tamna Logic
-    func setupPlayers() {
-        guard let playerIndex = playerIndex else { return }
-        for idx in playerIndex {
-            currentPlayers.append(playerImages[idx])
-        }
     }
     
     func setupUI() {
@@ -129,13 +118,15 @@ class GameViewController: UIViewController {
         //        view.setNeedsLayout()
     }
     
-    // 선택된 플레이어의 자리에만 플레이어 이미지를 보여줍니다
+    // 선택된 플레이어의 자리에만 플레이어 이미지를 보여줍니다. 유지.
     func imageSetup() {
-        for idx in playerIndex! {
+        guard let playerIndex = playerIndex else { return }
+        for idx in playerIndex {
             playerImages[idx].image = UIImage(named: "player\(idx)")
             playerImages[idx].layer.borderWidth = 3
             playerImages[idx].layer.cornerRadius = 30
             playerImages[idx].layer.borderColor = UIColor.clear.cgColor
+            currentPlayers.append(playerImages[idx])
         }
     }
     
@@ -169,12 +160,14 @@ class GameViewController: UIViewController {
             // 맞았다 표시하고 잠깐 쉬기
             // 다음 사람으로 인덱스 넘기기
             // 반대편 사람이면 플립
+            moveBorder()
             
             // 새로운 문제로 갈아끼움
             setupQuestionView()
         } else {
             // 틀렸다 표시하고 잠깐 쉬기
             // 다음 사람으로 인덱스 넘어감
+            moveAfterFail()
             
             currentLoserCount += 1
             // 세팅된 탈락자 수와 현재 탈락자 수가 같으면 게임 종료
@@ -257,7 +250,7 @@ extension GameViewController {
     
     // 첫번째 플레이어를 선택합니다.
     func selectFirstPlayer() {
-        let startIndex = (0...playerIndex!.count-1).randomElement()
+        let startIndex = (0...currentPlayers.count-1).randomElement()
         currentPlayerIndex = startIndex ?? 0
         fastTimer()
     }
@@ -324,13 +317,32 @@ extension GameViewController {
     // 다음 플레이어로 테두리 옮겨준다
     func moveBorder() {
         // 이동 하기 전에 현재 위치의 테두리를 제거
-        playerImages[playerIndex![currentPlayerIndex!]]
+        currentPlayers[currentPlayerIndex!]
             .layer.borderColor = UIColor.clear.cgColor
         // 다음 플레이어로 이동
-        currentPlayerIndex = (currentPlayerIndex! + 1) % playerIndex!.count
+        currentPlayerIndex = (currentPlayerIndex! + 1) % currentPlayers.count
         // 이동한 플레이어 위치에 테두리를 추가
-        playerImages[playerIndex![currentPlayerIndex!]]
+        currentPlayers[currentPlayerIndex!]
             .layer.borderColor = UIColor.blue.cgColor
     }
     
+    func moveAfterFail() {
+        // 이동 하기 전에 현재 위치의 alpha를 0
+        // 배열에서 제거
+        currentPlayers[currentPlayerIndex!].alpha = 0
+        currentPlayers.remove(at: currentPlayerIndex!)
+        // 그 자리 플레이어 제거했으니 index 안바꿔도됨.
+        // 하지만 currentPlayer의 마지막 인덱스보다 현재 인덱스가 크다면 0으로 전환.
+        if currentPlayerIndex! > currentPlayers.count - 1 {
+            currentPlayerIndex = 0
+        }
+        // 이동한 플레이어 위치에 테두리를 추가
+        currentPlayers[currentPlayerIndex!]
+            .layer.borderColor = UIColor.blue.cgColor
+    }
 }
+
+/*
+ 1. imageSetup 함수 안에서 초기 세팅하고, currentPlayers 배열 완성.
+ 2. selectFirstPlayer 로직에서 currentPlayers 중심으로 로직을 수정.
+ */

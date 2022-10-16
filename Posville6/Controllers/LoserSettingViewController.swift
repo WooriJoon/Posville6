@@ -33,6 +33,16 @@ class LoserSettingViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toGameVC" {
+            let gameVC = segue.destination as! GameViewController
+            gameVC.category = category
+            gameVC.gameMode = gameMode
+            gameVC.playerIndex = playerIndex?.sorted()
+            gameVC.loserCount = Int(valueStepper.value)
+        }
+    }
 }
 
 // MARK: UI Setup related Methods.
@@ -70,15 +80,6 @@ private extension LoserSettingViewController {
         }
     }
     
-    internal override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toGameVC" {
-            let gameVC = segue.destination as! GameViewController
-            gameVC.category = category
-            gameVC.gameMode = gameMode
-            gameVC.playerIndex = playerIndex?.sorted()
-            gameVC.loserCount = Int(valueStepper.value)
-        }
-    }
 }
 
 // MARK: IBAction Methods.
