@@ -388,5 +388,71 @@ extension Quiz {
         Quiz(level: .Advanced, question: "여우가 죽으니까 ( ) 슬퍼한다", options: ["토끼가", "범이", "괴가"], rightAnswer: "토끼가"),
         Quiz(level: .Advanced, question: "잉어가 뛰니까 ( )도 뛴다", options: ["망둥이", "꼴뚜기", "쭈꾸미"], rightAnswer: "망둥이"),
     ]
-    
+    // MARK: 과학 상식 퀴즈
+    static let scienceQuiz: [Quiz] = [
+        // 1 ~ 10
+        Quiz(level: .Advanced, question: "다음 중 배꼽이 없는 동물은?", options: ["원숭이", "곰", "개구리"], rightAnswer: "개구리"),
+        Quiz(level: .Advanced, question: "다음 중 풍선에 넣었을 때 소리가 잘 전달되는 기체는 무엇일까요??", options: ["헬륨", "이산화탄소", "수소"], rightAnswer: "이산화탄소"),
+        Quiz(level: .Advanced, question: "다음 중 과일 전지를 만드는데 필요 없는 것은 무엇일까요?", options: ["구리판", "아연판", "칠판"], rightAnswer: "칠판"),
+        Quiz(level: .Advanced, question: "공기분자와 작은 먼지들이 부딪혀서 흩어지는 현상을 뭐라고 할까요?", options: ["산란", "교란", "착란"], rightAnswer: "산란"),
+        Quiz(level: .Advanced, question: "표면에 작용하는 힘을 최소한으로 줄이려고 가장 작은 공 모양을 가지려는 힘을 뭐라고 할까요??", options: ["구심력", "원심력", "표면장력"], rightAnswer: "표면장력"),
+        
+        Quiz(level: .Advanced, question: "도르래의 축이 고정돼 있지 않은 도르래를 무슨 도르래라고 할까요?", options: ["복합도르레", "움직도르래", "고정도르래"], rightAnswer: "움직도르래"),
+        Quiz(level: .Advanced, question: "더운물과 찬물을 섞으면 더운물은 위로 이동하고 찬물은 아래로 이동하는 원리가 무엇인가?", options: ["대류 현상", "방전", "중력"], rightAnswer: "대류 현상"),
+        Quiz(level: .Advanced, question: "농도가 약한 물이 농도가 진한 쪽으로 이동하는 원리를 뭐라고 할까요?", options: ["고혈압", "모세관 현상", "삼투압"], rightAnswer: "삼투압"),
+        Quiz(level: .Advanced, question: "우유의 80%를 차지하고 있는 단백질의 이름은?", options: ["카제인단백질", "유청단백질", "대두단백질"], rightAnswer: "카제인단백질"),
+        Quiz(level: .Advanced, question: "다음 중 숯 전지를 만들 때 전해질로 사용되는 액체는?", options: ["설탕물", "흙탕물", "소금물"], rightAnswer: "소금물"),
+        
+        // 11 ~ 20
+        Quiz(level: .Advanced, question: "다음 중 전구의 필라멘트로 사용할 수 없는 것은?", options: ["흑연", "코일", "종이"], rightAnswer: "종이"),
+        Quiz(level: .Advanced, question: "로켓의 원리로 로켓이 우주까지 나갈 수 있는 힘을 뭐라고 할까요?", options: ["수원역", "추진력", "중력"], rightAnswer: "추진력"),
+        Quiz(level: .Advanced, question: "높은 곳에 있는 물을 기울이지 않고 낮은 곳으로 옮기는 관의 이름은 무엇일까?", options: ["엘보", "사이펀", "벨브"], rightAnswer: "사이펀"),
+        Quiz(level: .Advanced, question: "드라이아이스는 무엇으로 만들어져 있을까요?", options: ["이산화탄소", "질소", "일산화탄소"], rightAnswer: "이산화탄소"),
+        Quiz(level: .Advanced, question: "원운동을 하고 있는 물체가 그 원운동에 의해 회전중심으로부터 멀어지려고 하는 힘은?", options: ["구심력", "원심력", "중심력"], rightAnswer: "원심력"),
+        
+        Quiz(level: .Advanced, question: "방구멍이 있는 연으로 크기는 3대 2정도의 사각형인 우리 나라의 대표적인 연의 이름은 무엇일까요?", options: ["흡연", "가오리연", "방패연"], rightAnswer: "방패연"),
+        Quiz(level: .Advanced, question: "종이에 풀을 먹일 때 사용하는 것은 무엇일까요?", options: ["전분", "녹즙", "화분"], rightAnswer: "전분"),
+        Quiz(level: .Advanced, question: "소화기 안에 들어있는 것은 무엇일까요?", options: ["LP가스", "아황산가스", "이산화탄소"], rightAnswer: "이산화탄소"),
+        Quiz(level: .Advanced, question: "달고나에 들어가는 쌉쌀한 맛을 내는 이것은 무엇인가요?", options: ["탄산수소나트륨", "나이아신", "니코틴산"], rightAnswer: "탄산수소나트륨"),
+        Quiz(level: .Advanced, question: "어떤 공간이 완전히 비어 있는 상태를 말하기도 하구요, 일정한 공간에 공기나 가스를 제거한 상태를 말합니다.", options: ["진공", "공공", "오공"], rightAnswer: "진공"),
+        
+        // 21 ~ 30
+        Quiz(level: .Advanced, question: "이것은 빛으로 신호를 보내는 통신 방법입니다. 현재 전화기나 인터넷에서 사용되고 있는데요. 이 통신 방법은 무엇일까요?", options: ["이동통신", "광통신", "위성통신"], rightAnswer: "광통신"),
+        Quiz(level: .Advanced, question: "이것은 바닷물에서 소금을 만들 때 남은 물을 말합니다. 두부가 뭉치게 하는 역할을 하는데요. 이것은 무엇일까요?", options: ["소금물", "증류수", "간수"], rightAnswer: "간수"),
+        Quiz(level: .Advanced, question: "이것은 감귤, 딸기, 브로콜리, 감자 등에 많이 함유되어 있으며 대개 신맛이 납니다.", options: ["비타민C", "비타민B2", "비타민D"], rightAnswer: "비타민C"),
+        Quiz(level: .Advanced, question: "스카이 콩콩이 뛰는 원리는 무엇인가요?", options: ["추진력", "탄성력", "초능력"], rightAnswer: "탄성력"),
+        Quiz(level: .Advanced, question: "이것은 물이 증발하여 생긴 기체를 말합니다. 과거엔 이것을 이용하여 배와 기차를 움직였다", options: ["수증기", "이산화탄소", "수소"], rightAnswer: "수증기"),
+        
+        Quiz(level: .Advanced, question: "다음 중 스피커를 만드는 데 필요 없는 것은 무엇일까요?", options: ["자석", "코일", "염화나트륨"], rightAnswer: "염화나트륨"),
+        Quiz(level: .Advanced, question: "염기성과 산성이 만나면 무엇이 발생할까요?", options: ["이산화탄소", "수소", "염소"], rightAnswer: "이산화탄소"),
+        Quiz(level: .Advanced, question: "옥수수를 뜨거운 열에 가하면 커지지만 옥수수에 바늘로 구멍을 내면 (이것)이 빠져나가 커지지 않습니다.", options: ["수분", "이산화탄소", "단백질"], rightAnswer: "수분"),
+        Quiz(level: .Advanced, question: "폭죽이 계속 연소하려면 산소가 필요한데요, 이것은 산소를 계속 공급해주는 역할을 합니다. 이것은 무엇일까요?", options: ["마그네슘", "산화제", "이산화탄소"], rightAnswer: "산화제"),
+        Quiz(level: .Advanced, question: "다음 중 전기가 통하지 않는 물질은 무엇일까요?", options: ["물", "공기", "종이"], rightAnswer: "종이"),
+        
+        // 31 ~ 40
+        Quiz(level: .Advanced, question: "이것은 운동을 방해하는 힘을 말합니다. 물썰매장에 물이 있는 것도 이것을 줄이기 위한 것이다", options: ["마찰력", "중력", "추진력"], rightAnswer: "마찰력"),
+        Quiz(level: .Advanced, question: "다음 중 얼음이 이것과 만나면 온도가 더욱 내려갑니다", options: ["물", "햇빛", "소금"], rightAnswer: "소금"),
+        Quiz(level: .Advanced, question: "다음 중 조선시대의 발명가 장영실이 만든것이 아닌것은?", options: ["해시계", "측우기", "체중계"], rightAnswer: "체중계"),
+        Quiz(level: .Advanced, question: "우리 귀에 소리가 전달되는 건 어떤 힘이 작용해서 일까요?", options: ["관성의 법칙", "중력", "진동"], rightAnswer: "진동"),
+        Quiz(level: .Advanced, question: "지구상에서 가장 가벼운 기체는 수소입니다 수소 다음으로 가벼운 기체는?", options: ["헬륨", "리튬", "칼륨"], rightAnswer: "헬륨"),
+        
+        Quiz(level: .Advanced, question: "인라인 스케이트의 가장 중요한 부분은 바퀴입니다 이 힘이 작을 수록 바퀴가 잘 굴러갑니다 어떤 힘일까요?", options: ["구심력", "추진력", "마찰력"], rightAnswer: "마찰력"),
+        Quiz(level: .Advanced, question: "이것은 저온의 물체에서 열을 빼앗아 고온의 물체에 운반해주는 것이죠 이것은 무엇일까요?", options: ["쿠팡", "냉매", "파이프"], rightAnswer: "냉매"),
+        Quiz(level: .Advanced, question: "액체에 녹아서 전류를 흐르게 하는 물질을 무엇이라고 할까요?", options: ["전해질", "매질", "용매"], rightAnswer: "전해질"),
+        Quiz(level: .Advanced, question: "액체의 표면에서 분자들이 서로를 잡아당기는 힘?", options: ["표면장력", "부력", "원자력"], rightAnswer: "표면장력"),
+        Quiz(level: .Advanced, question: "종이를 발명한 사람은 누구일까요?", options: ["채륜", "하륜", "경륜"], rightAnswer: "채륜"),
+        
+        // 41 ~ 50
+        Quiz(level: .Advanced, question: "전기를 흘려 줄때만 자석의 성질을 갖게 되는 것을 무엇이라고 할까요?", options: ["자기장", "전기장", "모기장"], rightAnswer: "자기장"),
+        Quiz(level: .Advanced, question: "염색을 할때 천에 색이 잘 물들도록 도와주는 역할을 하는 것을 무엇이라고 할까요?", options: ["인화제", "융해제", "매염제"], rightAnswer: "매염제"),
+        Quiz(level: .Advanced, question: "머리털을 이루고 있는 단백질의 이름은 무엇일까요?", options: ["케라틴", "젤라틴", "세크레틴"], rightAnswer: "케라틴"),
+        Quiz(level: .Advanced, question: "유리를 만드는 재료는 무엇일가요?", options: ["아크릴", "소금", "모래"], rightAnswer: "모래"),
+        Quiz(level: .Advanced, question: "사진은 무엇을 이용해서 형체를 만들어 낼까요?", options: ["소리", "물", "빛"], rightAnswer: "빛"),
+        
+        Quiz(level: .Advanced, question: "식용유로 만들수 없는 것은 무엇일까요?", options: ["구두약", "치약", "비누"], rightAnswer: "치약"),
+        Quiz(level: .Advanced, question: "도자기를 만드는 흙의 특징은 무엇일까요?", options: ["색깔이 진하다", "강도가 세다", "점성이 세다"], rightAnswer: "점성이 세다"),
+        Quiz(level: .Advanced, question: "x-ray로 속을 볼 수 있는 이유는 무엇 때문일까요?", options: ["무게", "밀도", "온도"], rightAnswer: "밀도"),
+        Quiz(level: .Advanced, question: "한지는 어떤 나무를 재료로 만들까요?", options: ["닥나무", "뽕나무", "대나무"], rightAnswer: "닥나무"),
+        Quiz(level: .Advanced, question: "워터스크린에 사용되는 빛의 원리는 무엇일까요?", options: ["빛의 반사", "빛의 산란", "빛의 굴절"], rightAnswer: "빛의 산란")
+    ]
 }
