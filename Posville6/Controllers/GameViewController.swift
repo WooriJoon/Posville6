@@ -25,29 +25,66 @@ class GameViewController: UIViewController {
 	@IBOutlet weak var button3_1: UIButton!
 	@IBOutlet weak var button3_2: UIButton!
 	@IBOutlet weak var button3_3: UIButton!
-    
-    var quizManager = QuizManager.shared
-    var quizzes: [Quiz] = []
-    
-    var category: Category = .all
-    var gameMode: GameMode = .normal
-    var playerIndex: [Int]?
-    var loserCount: Int?
-    var currentLoserCount: Int?
+	
+	var quizManager = QuizManager.shared
+	var quizzes: [Quiz] = []
+	
+	var category: Category = .all
+	var gameMode: GameMode = .normal
+	var playerIndex: [Int]?
+	var loserCount: Int?
+	var currentLoserCount: Int?
+	
 	
 	@IBOutlet weak var timeBar: UIProgressView!
 	
 	var timer = Timer()
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		timeBar.progress = 0.0
 		setupUI()
-        setupQuiz()
+		setupQuiz()
+	}
+	
+	func setupQuiz() {
+		quizzes = quizManager.fetchQuizzes(category: category)
+		print(quizzes)
+	}
+	
+	func setupUI() {
+		// 문제를 띄워주는 view에 그림자 효과
+		questionView.layer.shadowOpacity = 0.3
+		questionView.layer.shadowOffset = CGSize(width: 1.0, height: 4.0)
+		questionView.layer.shadowRadius = 4
+		questionView.layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
+	}
+}
+
+// MARK: Alert Logic
+extension GameViewController {
+	
+    @IBAction func pauseButtonTapped(_ sender: UIButton) {
+		if gameMode == .normal {
+			let alert = UIAlertController(title: "일시정지", message: "게임에서 정말 나가시겠습니까?", preferredStyle: .alert)
+			let cancel = UIAlertAction(title: "취소", style: .destructive)
+			let exit = UIAlertAction(title: "나가기", style: .cancel)
+			alert.addAction(exit)
+			alert.addAction(cancel)
+			present(alert, animated: true)
+		} else {
+			let alert = UIAlertController(title: "일시정지", message: "피버모드에 일시정지란 없습니다.", preferredStyle: .alert)
+			let cancel1 = UIAlertAction(title: "취소", style: .cancel)
+			let cancel2 = UIAlertAction(title: "취소", style: .cancel)
+			alert.addAction(cancel2)
+			alert.addAction(cancel1)
+			present(alert, animated: true)
+		}
     }
-    
-    func setupQuiz() {
-        quizzes = quizManager.fetchQuizzes(category: category)
-        print(quizzes)
-    }
+}
+
+// MARK: ProgressBar Logic
+extension GameViewController {
 	
 	// TODO: button3_2 버튼을 눌렀을 때 액션이 되게 임시로 설정해놨는데 추후 뷰가 변경되었을 때 액션하도록 변경
 	@IBAction func buttonPressForTest(_ sender: Any) {
@@ -61,34 +98,12 @@ class GameViewController: UIViewController {
 			progress += 0.01
 			self.timeBar.progress = progress
 			
+			// 시간이 다 되었을 때
 			if self.timeBar.progress == 1.0 {
+				// TODO: 게임 오버 로직 추가
 				self.timeBar.progress = 0.0
 				timer.invalidate()
 			}
 		})
 	}
-		
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		timeBar.progress = 0.0
-		setupUI()
-	}
-	
-	func setupUI() {
-		// 문제를 띄워주는 view에 그림자 효과
-		questionView.layer.shadowOpacity = 0.3
-		questionView.layer.shadowOffset = CGSize(width: 1.0, height: 4.0)
-		questionView.layer.shadowRadius = 4
-		questionView.layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
-	}
-  
-    // TODO: 일시정지 버튼 Alert 구현
-    @IBAction func pauseButtonTapped(_ sender: UIButton) {
-//        let alert = UIAlertController(title: "일시정지", message: "게임에서 정말 나가시겠습니까?", preferredStyle: .alert)
-//        let cancel = UIAlertAction(title: "취소", style: .default)
-//        let exit = UIAlertAction(title: "나가기", style: .cancel)
-//        alert.addAction(exit)
-//        alert.addAction(cancel)
-//        present(alert, animated: true)
-    }
 }
