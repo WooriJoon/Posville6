@@ -268,7 +268,7 @@
                         <outlet property="threeButtonView" destination="OQy-ck-NQu" id="PKY-5U-LRw"/>
                         <outlet property="timeBar" destination="zsE-eN-feU" id="iNt-lL-lY6"/>
                         <outlet property="twoButtonView" destination="bbT-Uh-08S" id="2Wh-EF-bI4"/>
-                        <segue destination="jXm-Ak-dDX" kind="show" id="sko-Wh-Za3"/>
+                        <segue destination="jXm-Ak-dDX" kind="show" identifier="toEndVC" id="sko-Wh-Za3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJv-Vs-jiz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

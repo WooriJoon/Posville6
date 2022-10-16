@@ -37,7 +37,7 @@ class GameViewController: UIViewController {
     var category: Category = .all
     var gameMode: GameMode = .normal
     var playerIndex: [Int]?
-    var loserCount: Int?
+    var loserCount: Int = 0
     var currentLoserCount: Int = 0
     var currentPlayerIndex: Int?
     
@@ -154,20 +154,33 @@ class GameViewController: UIViewController {
     @IBAction func answerButtonTapped(_ sender: UIButton) {
         // 맞았는지 틀렸는지 검사
         if sender.currentTitle == quiz?.rightAnswer {
-            // 맞았다 표시
-            // 인덱스 넘기기
+            // 맞았다 표시하고 잠깐 쉬기
+            // 다음 사람으로 인덱스 넘기기
             // 반대편 사람이면 플립
-//            Timer.scheduledTimer(timeInterval: 1, repeats: false)
+            
+            // 새로운 문제로 갈아끼움
             setupQuestionView()
-            return
         } else {
-            // 틀렸다 표시
-            // 루저 카운트 및 게임을 끝내야하는가 검사
-            // 아니면 인덱스 넘기기
-            // 반대편 사람이면 플림
-            return
+            // 틀렸다 표시하고 잠깐 쉬기
+            // 다음 사람으로 인덱스 넘어감
+            
+            currentLoserCount += 1
+            // 세팅된 탈락자 수와 현재 탈락자 수가 같으면 게임 종료
+            if loserCount == currentLoserCount {
+                performSegue(withIdentifier: "toEndVC", sender: self)
+            }
+
+            // 반대편 사람이면 플립
+            // 새로운 문제로 갈아끼움
+            setupQuestionView()
         }
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "toEndVC" {
+//            let endVC = segue.destination as! EndViewController
+//        }
+//    }
     
 }
 
@@ -241,7 +254,7 @@ extension GameViewController {
     func fastTimer() {
         var time: Double = 0.0
         Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { timer in
-            self.firstNext()
+            self.moveBorder()
             time += 0.3
             if time > 2.0 {
                 timer.invalidate()
@@ -254,7 +267,7 @@ extension GameViewController {
     func normalTimer() {
         var time: Double = 0.0
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { timer in
-            self.firstNext()
+            self.moveBorder()
             time += 0.5
             if time >= 1.6{
                 timer.invalidate()
@@ -267,7 +280,7 @@ extension GameViewController {
     func slowTimer() {
         var time: Double = 0.0
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            self.firstNext()
+            self.moveBorder()
             time += 1.0
             if time >= 1.0 {
                 timer.invalidate()
@@ -297,7 +310,7 @@ extension GameViewController {
     }
     
     // 다음 플레이어로 테두리 옮겨준다
-    func firstNext() {
+    func moveBorder() {
         // 이동 하기 전에 현재 위치의 테두리를 제거
         playerImages[playerIndex![currentPlayerIndex!]]
             .layer.borderColor = UIColor.clear.cgColor

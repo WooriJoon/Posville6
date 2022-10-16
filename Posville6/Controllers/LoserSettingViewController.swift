@@ -76,6 +76,7 @@ private extension LoserSettingViewController {
             gameVC.category = category
             gameVC.gameMode = gameMode
             gameVC.playerIndex = playerIndex?.sorted()
+            gameVC.loserCount = Int(valueStepper.value)
         }
     }
 }
