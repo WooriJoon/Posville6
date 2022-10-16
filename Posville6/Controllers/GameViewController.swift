@@ -72,25 +72,33 @@ class GameViewController: UIViewController {
         
         switch quiz.options.count {
         case 2:
-            questionLabel.text = quiz.question
-            
             threeButtonView.alpha = 0
             threeButtonView.isUserInteractionEnabled = false
             
+            if quiz.question == "" {
+                questionLabel.text = "다음 중 맞는 것은?"
+            } else {
+                questionLabel.text = quiz.question
+            }
+            
             let options = quiz.options.shuffled()
-            button2_1.setTitle(options[0], for: .normal)
-            button2_2.setTitle(options[1], for: .normal)
+            setAnswerButton(option: options[0], button: button2_1)
+            setAnswerButton(option: options[1], button: button2_2)
             
         case 3:
-            questionLabel.text = quiz.question
-            
             twoButtonView.alpha = 0
             twoButtonView.isUserInteractionEnabled = false
             
+            if quiz.question == "" {
+                questionLabel.text = "다음 중 맞는 것은?"
+            } else {
+                questionLabel.text = quiz.question
+            }
+            
             let options = quiz.options.shuffled()
-            button3_1.setTitle(options[0], for: .normal)
-            button3_2.setTitle(options[1], for: .normal)
-            button3_3.setTitle(options[2], for: .normal)
+            setAnswerButton(option: options[0], button: button3_1)
+            setAnswerButton(option: options[1], button: button3_2)
+            setAnswerButton(option: options[2], button: button3_3)
             
         default:
             print("Quiz options Error")
@@ -104,6 +112,14 @@ class GameViewController: UIViewController {
         for idx in playerIndex! {
             playerImages[idx].image = UIImage(named: "player\(idx)")
         }
+    }
+    
+    func setAnswerButton(option: String, button: UIButton) {
+        button.setTitle(option, for: .normal)
+        button.layer.shadowOpacity = 0.3
+        button.layer.shadowOffset = CGSize(width: 1.0, height: 4.0)
+        button.layer.shadowRadius = 4
+        button.layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
     }
 	
 	// TODO: button3_2 버튼을 눌렀을 때 액션이 되게 임시로 설정해놨는데 추후 뷰가 변경되었을 때 액션하도록 변경
