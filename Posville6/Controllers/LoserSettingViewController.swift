@@ -75,7 +75,7 @@ private extension LoserSettingViewController {
             let gameVC = segue.destination as! GameViewController
             gameVC.category = category
             gameVC.gameMode = gameMode
-            gameVC.playerIndex = playerIndex
+            gameVC.playerIndex = playerIndex?.sorted()
         }
     }
 }

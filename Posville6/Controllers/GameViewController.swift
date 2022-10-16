@@ -9,6 +9,9 @@ import UIKit
 
 class GameViewController: UIViewController {
 	
+    var quizManager = QuizManager.shared
+    var quizzes: [Quiz] = []
+    
 	@IBOutlet weak var player0Image: UIImageView!
 	@IBOutlet weak var player1Image: UIImageView!
 	@IBOutlet weak var player2Image: UIImageView!
@@ -26,28 +29,39 @@ class GameViewController: UIViewController {
 	@IBOutlet weak var button3_2: UIButton!
 	@IBOutlet weak var button3_3: UIButton!
     
-    var quizManager = QuizManager.shared
-    var quizzes: [Quiz] = []
-    
     var category: Category = .all
     var gameMode: GameMode = .normal
     var playerIndex: [Int]?
     var loserCount: Int?
     var currentLoserCount: Int?
+    
+    lazy var playerImages: [UIImageView] = [
+        player0Image, player1Image, player2Image, player3Image, player4Image, player5Image
+    ]
 	
 	@IBOutlet weak var timeBar: UIProgressView!
 	
 	var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        timeBar.progress = 0.0
 		setupUI()
         setupQuiz()
         setupQuestionView()
+        imageSetup()
+    }
+    
+    func setupUI() {
+        // 문제를 띄워주는 view에 그림자 효과
+        questionView.layer.shadowOpacity = 0.3
+        questionView.layer.shadowOffset = CGSize(width: 1.0, height: 4.0)
+        questionView.layer.shadowRadius = 4
+        questionView.layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
     }
     
     func setupQuiz() {
         quizzes = quizManager.fetchQuizzes(category: category).shuffled()
-//        print(quizzes)
     }
     
     func setupQuestionView() {
@@ -55,25 +69,40 @@ class GameViewController: UIViewController {
             print("Quiz Error")
             return
         }
+        
         switch quiz.options.count {
         case 2:
+            questionLabel.text = quiz.question
+            
             threeButtonView.alpha = 0
             threeButtonView.isUserInteractionEnabled = false
             
             let options = quiz.options.shuffled()
-            button2_1.titleLabel!.text = options[0]
-            button2_2.titleLabel!.text = options[1]
+            button2_1.setTitle(options[0], for: .normal)
+            button2_2.setTitle(options[1], for: .normal)
+            
         case 3:
+            questionLabel.text = quiz.question
+            
             twoButtonView.alpha = 0
             twoButtonView.isUserInteractionEnabled = false
             
             let options = quiz.options.shuffled()
-            button3_1.titleLabel!.text = options[0]
-            button3_2.titleLabel!.text = options[1]
-            button3_3.titleLabel!.text = options[2]
+            button3_1.setTitle(options[0], for: .normal)
+            button3_2.setTitle(options[1], for: .normal)
+            button3_3.setTitle(options[2], for: .normal)
+            
         default:
             print("Quiz options Error")
             return
+        }
+//        view.setNeedsLayout()
+    }
+    
+    // 선택된 플레이어의 자리에만 플레이어 이미지를 보여줍니다
+    func imageSetup() {
+        for idx in playerIndex! {
+            playerImages[idx].image = UIImage(named: "player\(idx)")
         }
     }
 	
@@ -95,21 +124,7 @@ class GameViewController: UIViewController {
 			}
 		})
 	}
-		
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		timeBar.progress = 0.0
-		setupUI()
-	}
-	
-	func setupUI() {
-		// 문제를 띄워주는 view에 그림자 효과
-		questionView.layer.shadowOpacity = 0.3
-		questionView.layer.shadowOffset = CGSize(width: 1.0, height: 4.0)
-		questionView.layer.shadowRadius = 4
-		questionView.layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
-	}
-  
+	  
     // TODO: 일시정지 버튼 Alert 구현
     @IBAction func pauseButtonTapped(_ sender: UIButton) {
 //        let alert = UIAlertController(title: "일시정지", message: "게임에서 정말 나가시겠습니까?", preferredStyle: .alert)
