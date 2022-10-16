@@ -186,13 +186,27 @@
                                     <constraint firstItem="YgD-Fd-dZ7" firstAttribute="trailing" secondItem="zsE-eN-feU" secondAttribute="trailing" constant="16" id="zhJ-LV-vxd"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL3-NV-Bke">
+                                <rect key="frame" x="64" y="16" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="1tX-XM-nRF"/>
+                                    <constraint firstAttribute="height" constant="50" id="iBc-q8-a05"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="pause"/>
+                                <connections>
+                                    <action selector="pauseButtonTapped:" destination="oHj-eg-ah3" eventType="touchUpInside" id="Iqa-ZL-uOs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jmg-Je-hD6"/>
                         <color key="backgroundColor" name="BG"/>
                         <constraints>
                             <constraint firstItem="XFo-4K-tlg" firstAttribute="centerX" secondItem="h4o-2X-NSN" secondAttribute="centerX" id="ANV-LM-gvo"/>
+                            <constraint firstItem="LL3-NV-Bke" firstAttribute="leading" secondItem="h4o-2X-NSN" secondAttribute="leading" constant="64" id="Od2-aN-O9r"/>
                             <constraint firstItem="c7e-TP-ITV" firstAttribute="centerX" secondItem="h4o-2X-NSN" secondAttribute="centerX" id="QOY-iT-UGG"/>
                             <constraint firstAttribute="bottom" secondItem="qin-wh-v91" secondAttribute="bottom" constant="26" id="aq3-EM-dPt"/>
+                            <constraint firstItem="LL3-NV-Bke" firstAttribute="top" secondItem="h4o-2X-NSN" secondAttribute="top" constant="16" id="h8Z-qO-WZd"/>
                             <constraint firstItem="c7e-TP-ITV" firstAttribute="top" secondItem="h4o-2X-NSN" secondAttribute="top" constant="16" id="luN-xL-T20"/>
                             <constraint firstItem="qin-wh-v91" firstAttribute="centerX" secondItem="h4o-2X-NSN" secondAttribute="centerX" id="oJY-DM-DBi"/>
                             <constraint firstItem="XFo-4K-tlg" firstAttribute="top" secondItem="c7e-TP-ITV" secondAttribute="bottom" constant="14" id="xHF-zm-Ebe"/>
@@ -219,6 +233,7 @@
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
+        <image name="pause" width="50" height="50"/>
         <namedColor name="BG">
             <color red="0.9570000171661377" green="1" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

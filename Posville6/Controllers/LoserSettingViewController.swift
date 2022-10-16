@@ -69,6 +69,15 @@ private extension LoserSettingViewController {
             valueStepper.maximumValue = Double(10)
         }
     }
+    
+    internal override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toGameVC" {
+            let gameVC = segue.destination as! GameViewController
+            gameVC.category = category
+            gameVC.gameMode = gameMode
+            gameVC.playerIndex = playerIndex
+        }
+    }
 }
 
 // MARK: IBAction Methods.
