@@ -39,11 +39,39 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
 		setupUI()
         setupQuiz()
+        setupQuestionView()
     }
     
     func setupQuiz() {
-        quizzes = quizManager.fetchQuizzes(category: category)
-        print(quizzes)
+        quizzes = quizManager.fetchQuizzes(category: category).shuffled()
+//        print(quizzes)
+    }
+    
+    func setupQuestionView() {
+        guard let quiz = quizzes.popLast() else {
+            print("Quiz Error")
+            return
+        }
+        switch quiz.options.count {
+        case 2:
+            threeButtonView.alpha = 0
+            threeButtonView.isUserInteractionEnabled = false
+            
+            let options = quiz.options.shuffled()
+            button2_1.titleLabel!.text = options[0]
+            button2_2.titleLabel!.text = options[1]
+        case 3:
+            twoButtonView.alpha = 0
+            twoButtonView.isUserInteractionEnabled = false
+            
+            let options = quiz.options.shuffled()
+            button3_1.titleLabel!.text = options[0]
+            button3_2.titleLabel!.text = options[1]
+            button3_3.titleLabel!.text = options[2]
+        default:
+            print("Quiz options Error")
+            return
+        }
     }
 	
 	func setupUI() {

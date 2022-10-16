@@ -214,6 +214,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="button2_1" destination="QK0-3v-naq" id="q19-QI-KUg"/>
+                        <outlet property="button2_2" destination="TFc-kK-Ibp" id="2JP-Jg-apw"/>
+                        <outlet property="button3_1" destination="cjw-11-YsW" id="BJH-0a-MPS"/>
+                        <outlet property="button3_2" destination="rOB-MJ-fuJ" id="cnt-R2-rUq"/>
+                        <outlet property="button3_3" destination="dlp-oz-oqw" id="F8o-ww-HQx"/>
                         <outlet property="player0Image" destination="RnU-sg-Ill" id="O1x-DL-nAY"/>
                         <outlet property="player1Image" destination="q5U-0O-814" id="oSF-Xn-QlM"/>
                         <outlet property="player2Image" destination="cMX-pJ-5Xb" id="lyM-ee-QpH"/>
