@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_0" orientation="landscape" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -28,10 +27,8 @@
                                             <constraint firstAttribute="width" secondItem="FMl-hP-a0A" secondAttribute="height" multiplier="1:1" id="gzd-o2-uQZ"/>
                                             <constraint firstAttribute="height" constant="60" id="kVW-ku-GJX"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="basicButton"/>
                                         <connections>
                                             <action selector="onButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Rtm-cO-TMU"/>
                                         </connections>
@@ -42,8 +39,8 @@
                                             <constraint firstAttribute="width" constant="60" id="80N-FC-ANV"/>
                                             <constraint firstAttribute="height" constant="60" id="nNe-ui-D8e"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="basicButton"/>
                                         <connections>
                                             <action selector="onButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yLN-l2-wIs"/>
                                         </connections>
@@ -54,8 +51,8 @@
                                             <constraint firstAttribute="height" constant="60" id="5MG-tO-T8k"/>
                                             <constraint firstAttribute="width" constant="60" id="kuF-OC-U8e"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="basicButton"/>
                                         <connections>
                                             <action selector="onButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qZ6-JC-Xlx"/>
                                         </connections>
@@ -71,8 +68,8 @@
                                             <constraint firstAttribute="height" constant="60" id="8mT-Qd-RGL"/>
                                             <constraint firstAttribute="width" constant="60" id="R1v-3E-svL"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="basicButton"/>
                                         <connections>
                                             <action selector="onButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sH4-gu-B44"/>
                                         </connections>
@@ -83,8 +80,8 @@
                                             <constraint firstAttribute="width" constant="60" id="L9I-TU-YPY"/>
                                             <constraint firstAttribute="height" constant="60" id="jVG-or-tav"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="basicButton"/>
                                         <connections>
                                             <action selector="onButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8G2-Ec-BA6"/>
                                         </connections>
@@ -95,8 +92,8 @@
                                             <constraint firstAttribute="height" constant="60" id="Rf3-a9-NAc"/>
                                             <constraint firstAttribute="width" constant="60" id="bU8-ah-srz"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="basicButton" cornerStyle="capsule"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="basicButton"/>
                                         <connections>
                                             <action selector="onButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0VF-1W-tCu"/>
                                         </connections>

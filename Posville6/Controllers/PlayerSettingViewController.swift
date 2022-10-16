@@ -94,7 +94,7 @@ class MyBtn: UIButton {
 	
 	var isActivated: Bool = false {
 		didSet {
-			animate()
+            animate()
 		}
 	}
     
@@ -112,7 +112,7 @@ class MyBtn: UIButton {
     }
 	
 	lazy var playerIcon: UIImage! = UIImage(named: "player\(self.tag)")
-	let basicButton:UIImage! = UIImage(named: "basicButton")
+	let basicButton: UIImage! = UIImage(named: "basicButton")
 	
 	fileprivate func animate(){
 		UIView.animate(withDuration: 0.1, animations: { [weak self] in
