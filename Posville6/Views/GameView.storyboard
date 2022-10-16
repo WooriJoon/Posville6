@@ -101,6 +101,9 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonTapped:" destination="oHj-eg-ah3" eventType="touchUpInside" id="vbW-vf-vxk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFc-kK-Ibp">
                                                 <rect key="frame" x="162" y="0.0" width="132" height="88"/>
@@ -113,6 +116,9 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonTapped:" destination="oHj-eg-ah3" eventType="touchUpInside" id="qaP-Y3-7z0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -133,6 +139,9 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonTapped:" destination="oHj-eg-ah3" eventType="touchUpInside" id="a8G-Xn-eT9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOB-MJ-fuJ">
                                                 <rect key="frame" x="162" y="0.0" width="132" height="88"/>
@@ -146,6 +155,7 @@
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
+                                                    <action selector="answerButtonTapped:" destination="oHj-eg-ah3" eventType="touchUpInside" id="2fN-ds-Sqg"/>
                                                     <action selector="buttonPressForTest:" destination="oHj-eg-ah3" eventType="touchUpInside" id="Zi9-yB-g6r"/>
                                                 </connections>
                                             </button>
@@ -160,6 +170,9 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonTapped:" destination="oHj-eg-ah3" eventType="touchUpInside" id="I7J-tj-K8p"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -201,11 +214,31 @@
                                     <action selector="pauseButtonTapped:" destination="oHj-eg-ah3" eventType="touchUpInside" id="Iqa-ZL-uOs"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oru-6W-rAZ" userLabel="CountDownView">
+                                <rect key="frame" x="134" y="95" width="576" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="먼저 시작할 사람을 정합니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ae-dK-O8F">
+                                        <rect key="frame" x="130.33333333333329" y="83.333333333333343" width="315.66666666666674" height="33.666666666666657"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Csg-qa-y9r"/>
+                                    <constraint firstItem="1Ae-dK-O8F" firstAttribute="centerY" secondItem="oru-6W-rAZ" secondAttribute="centerY" id="jDO-YW-n4K"/>
+                                    <constraint firstAttribute="width" constant="576" id="mUm-yv-ZrI"/>
+                                    <constraint firstItem="1Ae-dK-O8F" firstAttribute="centerX" secondItem="oru-6W-rAZ" secondAttribute="centerX" id="vTu-2S-Dcb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jmg-Je-hD6"/>
                         <color key="backgroundColor" name="BG"/>
                         <constraints>
+                            <constraint firstItem="oru-6W-rAZ" firstAttribute="centerY" secondItem="h4o-2X-NSN" secondAttribute="centerY" id="8aJ-Vd-84E"/>
                             <constraint firstItem="XFo-4K-tlg" firstAttribute="centerX" secondItem="h4o-2X-NSN" secondAttribute="centerX" id="ANV-LM-gvo"/>
+                            <constraint firstItem="oru-6W-rAZ" firstAttribute="centerX" secondItem="h4o-2X-NSN" secondAttribute="centerX" id="KnO-hL-6Tu"/>
                             <constraint firstItem="LL3-NV-Bke" firstAttribute="leading" secondItem="h4o-2X-NSN" secondAttribute="leading" constant="64" id="Od2-aN-O9r"/>
                             <constraint firstItem="c7e-TP-ITV" firstAttribute="centerX" secondItem="h4o-2X-NSN" secondAttribute="centerX" id="QOY-iT-UGG"/>
                             <constraint firstAttribute="bottom" secondItem="qin-wh-v91" secondAttribute="bottom" constant="26" id="aq3-EM-dPt"/>
@@ -222,6 +255,8 @@
                         <outlet property="button3_1" destination="cjw-11-YsW" id="BJH-0a-MPS"/>
                         <outlet property="button3_2" destination="rOB-MJ-fuJ" id="cnt-R2-rUq"/>
                         <outlet property="button3_3" destination="dlp-oz-oqw" id="F8o-ww-HQx"/>
+                        <outlet property="countDownView" destination="oru-6W-rAZ" id="ir1-SL-NQE"/>
+                        <outlet property="countTextLabel" destination="1Ae-dK-O8F" id="Ncf-Je-hf9"/>
                         <outlet property="player0Image" destination="RnU-sg-Ill" id="O1x-DL-nAY"/>
                         <outlet property="player1Image" destination="q5U-0O-814" id="oSF-Xn-QlM"/>
                         <outlet property="player2Image" destination="cMX-pJ-5Xb" id="lyM-ee-QpH"/>
@@ -233,11 +268,22 @@
                         <outlet property="threeButtonView" destination="OQy-ck-NQu" id="PKY-5U-LRw"/>
                         <outlet property="timeBar" destination="zsE-eN-feU" id="iNt-lL-lY6"/>
                         <outlet property="twoButtonView" destination="bbT-Uh-08S" id="2Wh-EF-bI4"/>
+                        <segue destination="jXm-Ak-dDX" kind="show" identifier="toEndVC" id="sko-Wh-Za3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJv-Vs-jiz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="242.41706161137441" y="-263.07692307692309"/>
+        </scene>
+        <!--EndView-->
+        <scene sceneID="bxQ-B1-E6I">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EndView" id="jXm-Ak-dDX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="O0q-yK-iif"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F88-C3-hcf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="-214"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -248,6 +294,9 @@
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
