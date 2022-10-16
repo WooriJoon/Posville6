@@ -101,6 +101,9 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonTapped:" destination="oHj-eg-ah3" eventType="touchUpInside" id="vbW-vf-vxk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFc-kK-Ibp">
                                                 <rect key="frame" x="162" y="0.0" width="132" height="88"/>
@@ -113,6 +116,9 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonTapped:" destination="oHj-eg-ah3" eventType="touchUpInside" id="qaP-Y3-7z0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -133,6 +139,9 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonTapped:" destination="oHj-eg-ah3" eventType="touchUpInside" id="a8G-Xn-eT9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOB-MJ-fuJ">
                                                 <rect key="frame" x="162" y="0.0" width="132" height="88"/>
@@ -146,6 +155,7 @@
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
+                                                    <action selector="answerButtonTapped:" destination="oHj-eg-ah3" eventType="touchUpInside" id="2fN-ds-Sqg"/>
                                                     <action selector="buttonPressForTest:" destination="oHj-eg-ah3" eventType="touchUpInside" id="Zi9-yB-g6r"/>
                                                 </connections>
                                             </button>
@@ -160,6 +170,9 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerButtonTapped:" destination="oHj-eg-ah3" eventType="touchUpInside" id="I7J-tj-K8p"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -255,11 +268,22 @@
                         <outlet property="threeButtonView" destination="OQy-ck-NQu" id="PKY-5U-LRw"/>
                         <outlet property="timeBar" destination="zsE-eN-feU" id="iNt-lL-lY6"/>
                         <outlet property="twoButtonView" destination="bbT-Uh-08S" id="2Wh-EF-bI4"/>
+                        <segue destination="jXm-Ak-dDX" kind="show" id="sko-Wh-Za3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJv-Vs-jiz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="242.41706161137441" y="-263.07692307692309"/>
+        </scene>
+        <!--EndView-->
+        <scene sceneID="bxQ-B1-E6I">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EndView" id="jXm-Ak-dDX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="O0q-yK-iif"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F88-C3-hcf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="729" y="-214"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

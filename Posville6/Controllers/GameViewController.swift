@@ -11,6 +11,7 @@ class GameViewController: UIViewController {
     
     var quizManager = QuizManager.shared
     var quizzes: [Quiz] = []
+    var quiz: Quiz?
     
     @IBOutlet weak var player0Image: UIImageView!
     @IBOutlet weak var player1Image: UIImageView!
@@ -77,6 +78,8 @@ class GameViewController: UIViewController {
             print("Quiz Error")
             return
         }
+        
+        self.quiz = quiz
         
         // 퀴즈의 선택지의 갯수에 따라 설정을 다르게 합니다
         switch quiz.options.count {
@@ -146,6 +149,24 @@ class GameViewController: UIViewController {
         twoButtonView.isUserInteractionEnabled = false
         threeButtonView.alpha = 1
         threeButtonView.isUserInteractionEnabled = true
+    }
+    
+    @IBAction func answerButtonTapped(_ sender: UIButton) {
+        // 맞았는지 틀렸는지 검사
+        if sender.currentTitle == quiz?.rightAnswer {
+            // 맞았다 표시
+            // 인덱스 넘기기
+            // 반대편 사람이면 플립
+//            Timer.scheduledTimer(timeInterval: 1, repeats: false)
+            setupQuestionView()
+            return
+        } else {
+            // 틀렸다 표시
+            // 루저 카운트 및 게임을 끝내야하는가 검사
+            // 아니면 인덱스 넘기기
+            // 반대편 사람이면 플림
+            return
+        }
     }
     
 }
