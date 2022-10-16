@@ -37,7 +37,7 @@ class GameViewController: UIViewController {
     var gameMode: GameMode = .normal
     var playerIndex: [Int]?
     var loserCount: Int?
-    var currentLoserCount: Int?
+    var currentLoserCount: Int = 0
     var currentPlayerIndex: Int?
     
     lazy var playerImages: [UIImageView] = [
@@ -67,19 +67,21 @@ class GameViewController: UIViewController {
     }
     
     func setupQuiz() {
+        // 카테고리에 맞는 퀴즈 배열을 셔플하여 가져옵니다
         quizzes = quizManager.fetchQuizzes(category: category).shuffled()
     }
     
     func setupQuestionView() {
+        // 배열의 마지막 퀴즈를 꺼냅니다
         guard let quiz = quizzes.popLast() else {
             print("Quiz Error")
             return
         }
         
+        // 퀴즈의 선택지의 갯수에 따라 설정을 다르게 합니다
         switch quiz.options.count {
         case 2:
-            threeButtonView.alpha = 0
-            threeButtonView.isUserInteractionEnabled = false
+            changeToTwoButtonView()
             
             if quiz.question == "" {
                 questionLabel.text = "다음 중 맞는 것은?"
@@ -92,8 +94,7 @@ class GameViewController: UIViewController {
             setAnswerButton(option: options[1], button: button2_2)
             
         case 3:
-            twoButtonView.alpha = 0
-            twoButtonView.isUserInteractionEnabled = false
+            changeToThreeButtonView()
             
             if quiz.question == "" {
                 questionLabel.text = "다음 중 맞는 것은?"
@@ -130,6 +131,83 @@ class GameViewController: UIViewController {
         button.layer.shadowRadius = 4
         button.layer.shadowColor = UIColor.black.withAlphaComponent(0.25).cgColor
     }
+    
+    // 선택지가 2개인 문제로 바뀔때 뷰를 그립니다
+    func changeToTwoButtonView() {
+        twoButtonView.alpha = 1
+        twoButtonView.isUserInteractionEnabled = true
+        threeButtonView.alpha = 0
+        threeButtonView.isUserInteractionEnabled = false
+    }
+    
+    // 선택지가 3개인 문제로 바뀔때 뷰를 그립니다
+    func changeToThreeButtonView() {
+        twoButtonView.alpha = 0
+        twoButtonView.isUserInteractionEnabled = false
+        threeButtonView.alpha = 1
+        threeButtonView.isUserInteractionEnabled = true
+    }
+    
+}
+
+// MARK: Progress Bar
+extension GameViewController {
+	
+	// TODO: button3_2 버튼을 눌렀을 때 액션이 되게 임시로 설정해놨는데 추후 뷰가 변경되었을 때 액션하도록 변경
+	@IBAction func buttonPressForTest(_ sender: Any) {
+		progressBar()
+	}
+	
+	func progressBar() {
+		var progress: Float = 0.0
+		timeBar.progress = progress
+		
+		// withTimeInterval로 시간 변경
+		// TODO: 임시로 설정해 놓은 withTimeInterval 파라미터 0.01을 추후 교체
+		timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { (timer) in
+			progress += 0.01
+			self.timeBar.progress = progress
+			
+			if self.timeBar.progress == 1.0 {
+				self.timeBar.progress = 0.0
+				timer.invalidate()
+			}
+		})
+	}
+}
+
+// MARK: Pause
+extension GameViewController {
+	
+	@IBAction func pauseButtonTapped(_ sender: UIButton) {
+		if gameMode == .normal {
+			pauseForNormal()
+		} else {
+			pauseForFever()
+		}
+	}
+	
+	func pauseForNormal() {
+		let alert = UIAlertController(title: "일시정지", message: "게임에서 정말 나가시겠습니까?", preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "나가기", style: .default, handler: { exitAction in
+			self.navigationController?.popToRootViewController(animated: true)
+		}))
+		alert.addAction(UIAlertAction(title: "취소", style: .cancel))
+
+		present(alert, animated: true)
+	}
+	
+	func pauseForFever() {
+		let alert = UIAlertController(title: "일시정지", message: "야레야레, 피버모드는 나가기따윈 없다구?", preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "취소", style: .default))
+		alert.addAction(UIAlertAction(title: "취소", style: .default))
+
+		present(alert, animated: true)
+	}
+}
+
+// MARK: Timer
+extension GameViewController {
     
     // 첫번째 플레이어를 선택합니다.
     func selectFirstPlayer() {
@@ -208,60 +286,5 @@ class GameViewController: UIViewController {
         playerImages[playerIndex![currentPlayerIndex!]]
             .layer.borderColor = UIColor.blue.cgColor
     }
-}
-
-// MARK: Progress Bar
-extension GameViewController {
-	
-	// TODO: button3_2 버튼을 눌렀을 때 액션이 되게 임시로 설정해놨는데 추후 뷰가 변경되었을 때 액션하도록 변경
-	@IBAction func buttonPressForTest(_ sender: Any) {
-		progressBar()
-	}
-	
-	func progressBar() {
-		var progress: Float = 0.0
-		timeBar.progress = progress
-		
-		// withTimeInterval로 시간 변경
-		// TODO: 임시로 설정해 놓은 withTimeInterval 파라미터 0.01을 추후 교체
-		timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { (timer) in
-			progress += 0.01
-			self.timeBar.progress = progress
-			
-			if self.timeBar.progress == 1.0 {
-				self.timeBar.progress = 0.0
-				timer.invalidate()
-			}
-		})
-	}
-}
-
-// MARK: Pause
-extension GameViewController {
-	
-	@IBAction func pauseButtonTapped(_ sender: UIButton) {
-		if gameMode == .normal {
-			pauseForNormal()
-		} else {
-			pauseForFever()
-		}
-	}
-	
-	func pauseForNormal() {
-		let alert = UIAlertController(title: "일시정지", message: "게임에서 정말 나가시겠습니까?", preferredStyle: .alert)
-		alert.addAction(UIAlertAction(title: "나가기", style: .default, handler: { exitAction in
-			self.navigationController?.popToRootViewController(animated: true)
-		}))
-		alert.addAction(UIAlertAction(title: "취소", style: .cancel))
-
-		present(alert, animated: true)
-	}
-	
-	func pauseForFever() {
-		let alert = UIAlertController(title: "일시정지", message: "야레야레, 피버모드는 나가기따윈 없다구?", preferredStyle: .alert)
-		alert.addAction(UIAlertAction(title: "취소", style: .default))
-		alert.addAction(UIAlertAction(title: "취소", style: .default))
-
-		present(alert, animated: true)
-	}
+    
 }
